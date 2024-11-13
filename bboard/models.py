@@ -88,9 +88,9 @@ class Bb(models.Model):
 
     title = models.CharField(
         max_length=50,
-        verbose_name="Товар",
-        validators=[validators.RegexValidator(regex="^.{4,}$")],
-        error_messages={"invalid": "Введите 4 и более символа"},
+        verbose_name='Товар',
+        validators=[validators.RegexValidator(regex='^.{4,}$')],
+        error_messages={'invalid': 'Введите 4 и более символа'},
     )
 
     content = models.TextField(
@@ -99,6 +99,7 @@ class Bb(models.Model):
         verbose_name='Описание',
     )
 
+    # price = models.FloatField(null=True, blank=True, verbose_name='Цена')
     price = models.DecimalField(
         max_digits=15,
         decimal_places=2,
