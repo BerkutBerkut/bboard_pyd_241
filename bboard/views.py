@@ -4,8 +4,9 @@ from django.template import loader
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 
-# from bboard.forms import bbForm
+# from bboard.forms import BbForm
 from bboard.models import Bb, Rubric
+
 
 def index(request):
     bbs = Bb.objects.order_by('-published')
@@ -13,6 +14,7 @@ def index(request):
     context = {'bbs': bbs, 'rubrics': rubrics}
 
     return render(request, 'bboard/index.html', context)
+
 
 def by_rubric(request, rubric_id):
     bbs = Bb.objects.filter(rubric=rubric_id)
@@ -25,9 +27,10 @@ def by_rubric(request, rubric_id):
 
     return render(request, 'bboard/by_rubric.html', context)
 
+
 class BbCreateView(CreateView):
     template_name = 'bboard/create.html'
-    # from_class = bbForm
+    # form_class = BbForm
     success_url = reverse_lazy('bboard:index')
 
     def get_context_data(self, **kwargs):

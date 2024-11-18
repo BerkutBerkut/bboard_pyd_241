@@ -5,7 +5,7 @@ from django.db import models
 
 def validate_even(val):
     if val % 2 != 0:
-        raise ValidationError('Число %(value)s нечетное', code='odd',
+        raise ValidationError('Число %(value)s нечётное', code='odd',
                               params={'value': val})
 
 
@@ -16,10 +16,11 @@ class MinMaxValueValidator:
 
     def __call__(self, val):
         if val < self.min_value or val > self.max_value:
-            raise ValidationError('Введенное число должно'
-                    'находиться в диапазоне от %(min)s до %(max)s',
-                    code='out_of_range',
-                    params={'min': self.min_value, 'max': self.max_value})
+            raise ValidationError('Введённое число должно'
+                  'находиться в диапазоне от %(min)s до %(max)s',
+                  code='out_of_range',
+                  params={'min': self.min_value, 'max': self.max_value})
+
 
 
 class Rubric(models.Model):
@@ -27,7 +28,7 @@ class Rubric(models.Model):
         unique=True,
         max_length=20,
         db_index=True,
-        verbose_name='Название рубрики',
+        verbose_name='Название',
     )
 
     def __str__(self):
@@ -39,14 +40,14 @@ class Rubric(models.Model):
     # def save(self, *args, **kwargs):
     #     # Действия перед сохранением
     #     super().save(*args, **kwargs)
-    #     # Действия после сохранения
+    #     # Действия после сохранением
     #
     # def delete(self, *args, **kwargs):
     #     super().delete(*args, **kwargs)
 
     class Meta:
-        verbose_name = "Рубрика"
-        verbose_name_plural = "Рубрики"
+        verbose_name = 'Рубрика'
+        verbose_name_plural = 'Рубрики'
 
 
 class Bb(models.Model):
@@ -64,14 +65,14 @@ class Bb(models.Model):
     )
 
     # KINDS = (
-    #     ('КУпля-продажа', (
+    #     ('Купля-продажа', (
     #         ('b', 'Куплю'),
     #         ('s', 'Продам'),
     #     )),
     #     ('Обмен', (
     #         ('c', 'Обменяю'),
     #     ))
-    #  )
+    # )
 
     kind = models.CharField(
         max_length=1,
@@ -84,6 +85,7 @@ class Bb(models.Model):
         null=True,
         on_delete=models.PROTECT,
         verbose_name='Рубрика',
+        # related_name = 'estres' # можно использовать вместо bb_set
     )
 
     title = models.CharField(
@@ -116,16 +118,6 @@ class Bb(models.Model):
         verbose_name='Опубликовано',
     )
 
-    price_actual = models.DecimalField(
-        max_digits=15,
-        decimal_places=2,
-        null=True,
-        blank=True,
-        default=0,
-        verbose_name="Цена актуальная",
-        validators=[validate_even],
-    )
-
     # is_active = models.BooleanField()
     # email = models.EmailField()
     # url = models.URLField()
@@ -144,9 +136,8 @@ class Bb(models.Model):
             errors['content'] = ValidationError('Укажите описание товара')
 
         if self.price and self.price < 0:
-            errors['price'] = ValidationError('Укажите неотрицательное'
+            errors['price'] = ValidationError('Укажите неоьрицательное'
                                               'значение цены')
-
         if errors:
             raise ValidationError(errors)
 
@@ -155,6 +146,8 @@ class Bb(models.Model):
 
     class Meta:
         ordering = ['-published', 'title']
+        # order_with_respect_to = 'rubric'
+
         unique_together = ('title', 'published')
         verbose_name = 'Объявление'
         verbose_name_plural = 'Объявления'
