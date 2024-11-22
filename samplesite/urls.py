@@ -18,6 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('bboard.urls', namespace='bboard')),
+    path("admin/", admin.site.urls),
+    path("", include("bboard.urls", namespace="bboard")),
+
+    # path("", include("bboard.urls", namespace="default-bboard")),
+    # path("bboard/", include("bboard.urls", namespace="other-bboard")),
+    
+    # path('', include([
+    #             PATH('add/', BbCreateview.as_view(), name='add'),
+    #             PATH('<int;rubric_id>/', by_rubric, name="by_rubric"),
+    #             PATH('', index, name='index'),
+    # ])),
 ]
