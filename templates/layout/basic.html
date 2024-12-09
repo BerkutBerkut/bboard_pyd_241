@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-{% load static %}
+{% load static  %}
 
 <html lang="ru">
 <head>
@@ -28,6 +28,10 @@
     {% block content %}
     {% endblock %}
 </section>
+
+<footer>
+    {% now 'SHORT_DATETIME_FORMAT' %}
+</footer>
 
 </body>
 </html>
