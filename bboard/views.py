@@ -13,19 +13,40 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView, SingleObjectMixin
 from django.views.generic.base import View, TemplateView
 from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
+from django.core.paginator import Paginator
 
 from bboard.forms import BbForm
 from bboard.models import Bb, Rubric
 
 
 # Основной (вернуть)
-def index(request):
-    bbs = Bb.objects.order_by('-published')
-    # rubrics = Rubric.objects.all()
-    rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
-    context = {'bbs': bbs, 'rubrics': rubrics}
+# def index(request):
+#     bbs = Bb.objects.order_by('-published')
+#     # rubrics = Rubric.objects.all()
+#     rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
+#     context = {'bbs': bbs, 'rubrics': rubrics}
 
-    return render(request, 'bboard/index.html', context)
+#     return render(request, 'bboard/index.html', context)
+
+
+def index(request):
+    bbs = Bb.objects.order_by("-published")
+    # rubrics = Rubric.objects.all()
+    rubrics = Rubric.objects.annotate(cnt=Count("bb")).filter(cnt__gt=0)
+
+    paginator = Paginator(bbs, 2)
+
+    if 'page' in request.GET:
+        page_num = request.GET['page']
+    else:
+        page_num = 1
+
+    page = paginator.get_page(page_num)
+
+    context = {"bbs": page.object_list, "rubrics": rubrics, 'page': page}
+
+
+    return render(request, "bboard/index.html", context)
 
 
 class BbIndexView(ArchiveIndexView):

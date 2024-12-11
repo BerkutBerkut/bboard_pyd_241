@@ -2,7 +2,7 @@
 
 {% block content %}
     
-{#    {{ block.super }} #}
+{#    {{ block.super }}#}
 
     {% with bb_count=bbs.count %}
         {% if bb_count > 0 %}
@@ -21,22 +21,4 @@
         <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
     </div>
     {% endfor %}
-
-    <div>
-        {% if page.has_previous %}
-            <a href="?page={{ page.previous_page_number }}">&lt;</a>"
-            &nbsp; &nbsp; | &nbsp; &nbsp;
-        
-        {% endif %}
-
-        Часть №{{ page.number }} из {{ page.paginator.num_pages }}
-
-        {% if page.has_next %}
-            &nbsp; &nbsp; | &nbsp; &nbsp;
-            <a href="?page={{ page.next_page_number }}">&gt;</a>"
-           
-
-        {% endif %}
-
-    </div>
 {% endblock %}

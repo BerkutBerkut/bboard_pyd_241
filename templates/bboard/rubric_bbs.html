@@ -9,23 +9,24 @@
     {% url 'bboard:detail' bb.pk as detail_url %}
     <div class="{% cycle 'bb1' 'bb2' %}">
         {% if forloop.first %}
-        <h2 style="font-size: 48px;">{{ forloop.counter }}.
-            {% comment 'Доделать до завтра'%}
-            <!-- <a href="{% url 'bboard:detail' bb.pk %}">{{ bb.title }}</a> -->
-            <!-- <a href="{% url 'bboard:detail' bb.pk %}">{{ bb.title }}</a> -->
-            <!-- <a href="{% url 'bboard:detail' bb.pk %}">{{ bb.title }}</a> -->
-            {% endcomment %}
-            <a href="{{ detail_url}}">{{ bb.title }}</a>
-        </h2>
+            <h2 style="font-size: 48px;">{{ forloop.counter }}.
+                {% comment 'Доделать до завтра' %}
+    {#            <a href="{% url 'bboard:detail' bb.pk %}">{{ bb.title }}</a>#}
+    {#            <a href="{% url 'bboard:detail' pk=bb.pk %}">{{ bb.title }}</a>#}
+                {% endcomment %}
+                <a href="{{ detail_url }}">{{ bb.title }}</a>
+            </h2>
         {% else %}
-        <h2>{{ forloop.counter }}.
-            <a href="{{ detail_url}}">{{ bb.title }}</a>
-        </h2>
+            <h2>{{ forloop.counter }}.
+                <a href="{{ detail_url }}">{{ bb.title }}</a>
+            </h2>
         {% endif %}
-        <!-- <p>{{ bb.content|truncatewords:3 }}</p> -->
+{#        <p>{{ bb.content|truncatewords:3 }}</p>#}
         <p>{{ bb.content }}</p>
+
         {% ifchanged bb.rubric.pk %}
-            <p><a href="{% url 'bboard:by_rubric' bb.rubric.pk %}"></a>
+            <p><a href="{% url 'bboard:by_rubric' bb.rubric.pk %}">
+                {{ bb.rubric.name }}</a></p>
         {% endifchanged %}
 
         <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
@@ -35,8 +36,10 @@
     {% empty %}
         <p>Объявлений нет</p>
     {% endfor %}
+
     {% comment %}
         {% lorem 5 p %}
         {% debug %}
     {% endcomment %}
+
 {% endblock %}
