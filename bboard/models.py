@@ -29,6 +29,46 @@ class MinMaxValueValidator:
                   'находиться в диапазоне от %(min)s до %(max)s',
                   code='out_of_range',
                   params={'min': self.min_value, 'max': self.max_value})
+        
+
+class Child(models.Model):
+    name = models.CharField(max_length=30)
+    GENDER = (
+        (None, 'Выберите пол ребенка'),
+        ('b', 'Мальчик'),
+        ('g', 'Девочка'),
+    )
+    gender = models.CharField(
+        max_length=1,
+        choices=GENDER,
+    )
+
+
+class Parent(models.Model):
+    name = models.CharField(max_length=50)
+    child = models.ForeignKey(Child, on_delete=models.PROTECT)
+
+
+class Icecream(models.Model):
+    name = models.CharField(max_length=30)
+    сontent = models.TextField(
+        null=True,
+        blank=True,
+        verbose_name='Описание мороженного',
+    )
+    price = models.DecimalField(
+        max_digits=15,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        default=0,
+        verbose_name='Цена',
+    )
+
+class Boutique(models.Model):
+    name = models.CharField(max_length=30)
+    icereams = models.ManyToManyField(Icecream)
+
 
 
 class Rubric(models.Model):
