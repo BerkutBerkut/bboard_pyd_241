@@ -3,15 +3,6 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 
-def validate_positive_or_zero(val):
-    if val <= 0:
-        raise ValidationError(
-            "Значение %(value)s должно быть больше 0.",
-            code="negative",
-            params={"value": val},
-        )
-
-
 def validate_even(val):
     if val % 2 != 0:
         raise ValidationError('Число %(value)s нечётное', code='odd',
@@ -29,45 +20,6 @@ class MinMaxValueValidator:
                   'находиться в диапазоне от %(min)s до %(max)s',
                   code='out_of_range',
                   params={'min': self.min_value, 'max': self.max_value})
-        
-
-class Child(models.Model):
-    name = models.CharField(max_length=30)
-    GENDER = (
-        (None, 'Выберите пол ребенка'),
-        ('b', 'Мальчик'),
-        ('g', 'Девочка'),
-    )
-    gender = models.CharField(
-        max_length=1,
-        choices=GENDER,
-    )
-
-
-class Parent(models.Model):
-    name = models.CharField(max_length=50)
-    child = models.ForeignKey(Child, on_delete=models.PROTECT)
-
-
-class Icecream(models.Model):
-    name = models.CharField(max_length=30)
-    сontent = models.TextField(
-        null=True,
-        blank=True,
-        verbose_name='Описание мороженного',
-    )
-    price = models.DecimalField(
-        max_digits=15,
-        decimal_places=2,
-        null=True,
-        blank=True,
-        default=0,
-        verbose_name='Цена',
-    )
-
-class Boutique(models.Model):
-    name = models.CharField(max_length=30)
-    icereams = models.ManyToManyField(Icecream)
 
 
 
@@ -156,9 +108,8 @@ class Bb(models.Model):
         null=True,
         blank=True,
         default=0,
-        verbose_name="Цена",
-        validators=[validate_positive_or_zero, validate_even]
-        
+        verbose_name='Цена',
+        # validators=[validate_even]
     )
 
     published = models.DateTimeField(
@@ -179,20 +130,14 @@ class Bb(models.Model):
 
     title_and_price.short_description = 'Название и цена'
 
-    def id_and_title(self):
-        return f'ID: {self.id}, Title: {self.title}'
-
-    def id_and_price_sum(self):
-        total_price = Bb.objects.aggregate(total=models.Sum("price"))["total"] or 0
-        return f"ID: {self.id}, Сумма цен: {total_price:.2f} тг."
-
     def clean(self):
         errors = {}
         if not self.content:
             errors['content'] = ValidationError('Укажите описание товара')
 
         if self.price and self.price < 0:
-            errors['price'] = ValidationError('Укажите не отрицательное значение цены')
+            errors['price'] = ValidationError('Укажите неоьрицательное'
+                                              'значение цены')
         if errors:
             raise ValidationError(errors)
 
