@@ -31,23 +31,15 @@ class Rubric(models.Model):
         verbose_name='Название',
     )
 
+    order = models.SmallIntegerField(default=0, db_index=True)
+
     def __str__(self):
         return f'{self.name}'
-
-    # def get_absolut_url(self):
-    #     return f"{self.pk}/"
-
-    # def save(self, *args, **kwargs):
-    #     # Действия перед сохранением
-    #     super().save(*args, **kwargs)
-    #     # Действия после сохранением
-    #
-    # def delete(self, *args, **kwargs):
-    #     super().delete(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Рубрика'
         verbose_name_plural = 'Рубрики'
+        ordering = ['order', 'name']
 
 
 class Bb(models.Model):
