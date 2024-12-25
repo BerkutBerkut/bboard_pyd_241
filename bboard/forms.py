@@ -2,8 +2,9 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core import validators
 from django.core.exceptions import ValidationError
-from django.forms import ModelForm, modelform_factory, Select
+from django.forms import ModelForm, modelform_factory, Select, modelformset_factory
 from django.forms.fields import DecimalField
+from django.forms.models import BaseModelFormSet
 
 from bboard.models import Bb, Rubric
 
@@ -101,3 +102,18 @@ class RegisterUserForm(ModelForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2',
                   'first_name', 'last_name')
+
+
+RubricFormSet = modelformset_factory(Rubric, fields=('name',),
+                                     can_order=True, can_delete=True)
+
+
+class RubricBaseFormSet(BaseModelFormSet):
+    def clean(self):
+        super().clean()
+        names = [form.cleaned_data['name'] for form in self.forms \
+                 if 'name' in form.cleaned_data]
+        if ('Недвижимость' not in names) or ('Транспорт' not in names) \
+            or ('Мебель' not in names):
+            raise ValidationError(
+                'Добавьте рубрики недвижимости, транспорта и мебели')
