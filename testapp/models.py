@@ -42,14 +42,32 @@ class Message(models.Model):
     class Meta:
         ordering = ['-published']
 
+    def __str__(self):
+        return f"Message: {self.content[:20]}"
+
 
 class PrivateMessage(Message):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.OneToOneField(Message, on_delete=models.CASCADE,
                                    parent_link=True)
 
-    class Met:
-        ordering = []
+    class Meta:
+        ordering = ['-published']
+
+    def __str__(self):
+        return f"PrivateMessage to {self.user.username}"
+
+# Двойное последовательное наследование
+class MegaPrivateMessage(PrivateMessage):
+    priority = models.IntegerField(default=1)
+    attachment = models.FileField(upload_to='attachments/', null=True, blank=True)
+
+    class Meta:
+        ordering = ['-priority',  '-published']
+
+    def __str__(self):
+        return f"MegaPrivateMessage to {self.user.username}, Priority: {self.priority}"
+    
 
 
 # 2. Абстрактные модели
@@ -69,5 +87,3 @@ class PrivateMessage(Message):
 
 #     # class Met:
 #     #     ordering = ['order', 'name']
-
-
