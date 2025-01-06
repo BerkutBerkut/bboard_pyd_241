@@ -22,6 +22,74 @@ class MinMaxValueValidator:
                   params={'min': self.min_value, 'max': self.max_value})
 
 
+# class Child(models.Model):
+#     name = models.CharField(max_length=30)
+#     GENDER = (
+#         (None, "Выберите пол ребенка"),
+#         ("b", "Мальчик"),
+#         ("g", "Девочка"),
+#     )
+#     gender = models.CharField(
+#         max_length=1,
+#         choices=GENDER,
+#     )
+
+
+# class Parent(models.Model):
+#     name = models.CharField(max_length=50)
+#     child = models.ForeignKey(Child, on_delete=models.PROTECT)
+
+
+# class Icecream(models.Model):
+#     name = models.CharField(max_length=30)
+#     content = models.TextField(
+#         max_length=255,
+#         null=True,
+#         blank=True,
+#         verbose_name="Описание мороженного",
+#     )
+#     price = models.DecimalField(
+#         max_digits=15,
+#         decimal_places=2,
+#         null=True,
+#         blank=True,
+#         default=0,
+#         verbose_name="Цена",
+#     )
+
+#     def __str__(self):
+#         return self.name
+
+
+# class Boutique(models.Model):
+#     name = models.CharField(max_length=30)
+#     icecreams = models.ManyToManyField(Icecream) # Связь многие ко многим
+
+#     def __str__(self):
+#         return f"{self.name}"
+
+
+class Course(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def __str__(self):
+        return self.name
+
+
+class Student(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    courses = models.ManyToManyField(
+        Course, related_name="students"
+    )  # Связь многие-ко-многим
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 class Rubric(models.Model):
     name = models.CharField(
