@@ -20,8 +20,8 @@ from django.views.generic.detail import DetailView, SingleObjectMixin
 from django.views.generic.base import View, TemplateView
 from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
 
-from bboard.forms import BbForm, RubricBaseFormSet
-from bboard.models import Bb, Rubric
+from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm
+from bboard.models import Bb, Rubric, Icecream
 
 
 # Основной (вернуть)
@@ -268,3 +268,14 @@ def bbs(request, rubric_id):
         formset = BbsFormSet(instance=rubric)
     context = {'formset': formset, 'current_rubric': rubric}
     return render(request, 'bboard/bbs.html', context)
+
+
+def add_icecream(request):
+    if request.method == "POST":
+        form = IcecreamForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('icecream_list')
+    else:
+        form = IcecreamForm()
+    return render(request, 'bboard/add_icecream.html', {'form': form})

@@ -6,7 +6,7 @@ from django.forms import ModelForm, modelform_factory, Select, modelformset_fact
 from django.forms.fields import DecimalField
 from django.forms.models import BaseModelFormSet
 
-from bboard.models import Bb, Rubric
+from bboard.models import Bb, Rubric, Icecream
 
 
 # Основной (вернуть)
@@ -117,3 +117,15 @@ class RubricBaseFormSet(BaseModelFormSet):
             or ('Мебель' not in names):
             raise ValidationError(
                 'Добавьте рубрики недвижимости, транспорта и мебели')
+        
+
+
+class IcecreamForm(forms.ModelForm):
+    class Meta:
+        model = Icecream
+        fields = ['name', 'content', 'price']
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Название мороженного'}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Описание', 'rows': 3}),
+            'price': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Цена'}),
+        }

@@ -6,12 +6,12 @@ from bboard.models import Bb
 from bboard.views import (index, by_rubric, BbCreateView,
                           add_and_save, bb_detail, BbRubricBbsView,
                           BbDetailView, BbEditView, BbDeleteView, BbIndexView,
-                          BbRedirectView, edit, rubrics, bbs)
+                          BbRedirectView, edit, rubrics, bbs, add_icecream)
 
 app_name = 'bboard'
 
 urlpatterns = [
-    # path('<int:year>/week/<int:week>/',
+    # path('<int:year>/week/<int:week>/',fe
     #      WeekArchiveView.as_view(model=Bb, date_field='published',
     #                              context_object_name='bbs')),
     # path('<int:year>/<int:month>/<int:day>/',
@@ -33,6 +33,8 @@ urlpatterns = [
     path('<int:rubric_id>/', BbRubricBbsView.as_view(), name='by_rubric'),
 
     path('detail/<int:pk>/', BbDetailView.as_view(), name='detail'),
+
+    path('add_icecream/', add_icecream, name='add_icecream'),
 
     path('', index, name='index'),
     # path('', BbIndexView.as_view(), name='index'),
