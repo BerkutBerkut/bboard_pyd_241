@@ -270,19 +270,38 @@ def bbs(request, rubric_id):
     return render(request, 'bboard/bbs.html', context)
 
 
-def add_icecream(request):
-    if request.method == "POST":
-        form = IcecreamForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect(reverse('icecream_list'))
-    else:
-        form = IcecreamForm()
+# def add_icecream(request):
+#     if request.method == "POST":
+#         form = IcecreamForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect(reverse('icecream_list'))
+#     else:
+#         form = IcecreamForm()
 
-    return render(request, 'bboard/add_icecream.html', {'form': form})
+#     return render(request, 'bboard/add_icecream.html', {'form': form})
 
 
 def icecream_list(request):
     icecreams = Icecream.objects.all()
     return render(request, 'bboard/icecream_list.html', {'icecreams': icecreams})
+
+
+# Новый контроллер с разделенной логикой
+def create_icecream(request):
+    if request.method == "POST":
+        form = IcecreamForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("Мороженое успешно добавлено!")
+        else:
+            return render(
+                request,
+                'create_icecream.html',
+                {'form': form, 'error': 'Форма заполнена некорректно!'},
+            )
+    else:
+        form = IcecreamForm()
+    return render(request, 'bboard/create_icecream.html', {'form': form})
+
 

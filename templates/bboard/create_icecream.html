@@ -1,0 +1,18 @@
+{% extends "layout/basic.html" %}
+
+
+{% block title %}Добавить мороженное{% endblock %}
+
+{% block content %}
+<h1>Добавление мороженого</h1>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить</button>
+</form>
+
+{% endblock %}
