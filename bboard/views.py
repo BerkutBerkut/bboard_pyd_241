@@ -287,21 +287,52 @@ def icecream_list(request):
     return render(request, 'bboard/icecream_list.html', {'icecreams': icecreams})
 
 
-# Новый контроллер с разделенной логикой
-def create_icecream(request):
+# # Новый контроллер с разделенной логикой
+# def create_icecream(request):
+#     if request.method == "POST":
+#         form = IcecreamForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponse("Мороженое успешно добавлено!")
+#         else:
+#             return render(
+#                 request,
+#                 'create_icecream.html',
+#                 {'form': form, 'error': 'Форма заполнена некорректно!'},
+#             )
+#     else:
+#         form = IcecreamForm()
+#     return render(request, 'bboard/create_icecream.html', {'form': form})
+
+
+# Контроллер для работы с набором форм
+def manage_icecreams(request):
+    # Создаем набор форм
+    IcecreamFormSet = modelformset_factory(
+        Icecream, fields=("name", "content", "price"), extra=1, can_delete=True
+    )
+
     if request.method == "POST":
-        form = IcecreamForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponse("Мороженое успешно добавлено!")
+        formset = IcecreamFormSet(request.POST)
+        if formset.is_valid():
+            # Сохраняем данные в базу
+            formset.save()
+            return redirect("success")  # Перенаправляем на страницу отзыва
         else:
+            print(formset.errors)
             return render(
                 request,
-                'create_icecream.html',
-                {'form': form, 'error': 'Форма заполнена некорректно!'},
+                'bboard/manage_icecreams.html',
+                {'formset': formset, 'error': 'Форма содержит ошибки!'},
             )
+
     else:
-        form = IcecreamForm()
-    return render(request, 'bboard/create_icecream.html', {'form': form})
+        # Показываем пустой набор форм или заполняем существующими данными
+        formset = IcecreamFormSet(queryset=Icecream.objects.all())
+
+    return render(request, 'bboard/manage_icecreams.html', {'formset': formset})
 
 
+# Контроллер успешной обработки
+def success_view(request):
+    return render(request, 'bboard/success.html')

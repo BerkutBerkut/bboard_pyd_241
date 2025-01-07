@@ -7,8 +7,10 @@ from bboard.views import (index, by_rubric, BbCreateView,
                           add_and_save, bb_detail, BbRubricBbsView,
                           BbDetailView, BbEditView, BbDeleteView, BbIndexView,
                           BbRedirectView, edit, rubrics, bbs)
-# from bboard.views import add_icecream, icecream_list
-from bboard.views import create_icecream, icecream_list
+# from bboard.views import add_icecream
+from bboard.views import  manage_icecreams, success_view
+# from bboard.views import create_icecream
+from bboard.views import icecream_list
 
 app_name = 'bboard'
 
@@ -33,7 +35,9 @@ urlpatterns = [
     path("delete/<int:pk>/", BbDeleteView.as_view(), name="delete"),
     path("<int:rubric_id>/", BbRubricBbsView.as_view(), name="by_rubric"),
     path("detail/<int:pk>/", BbDetailView.as_view(), name="detail"),
-    path("create_icecream/", create_icecream, name="create_icecreame"),
+    # path("create_icecream/", create_icecream, name="create_icecreame"),
+    path("manage_icecreams/", manage_icecreams, name="manage_icecreams"),
+    path("success/", success_view, name="success"),
     # path('add_icecream/', add_icecream, name='add_icecream'),
     path("icecream_list/", icecream_list, name="icecream_list"),
     path("", index, name="index"),
