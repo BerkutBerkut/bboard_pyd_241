@@ -22,6 +22,26 @@ class MinMaxValueValidator:
                   params={'min': self.min_value, 'max': self.max_value})
 
 
+class RubricQuerySet(models.QuerySet):
+    def order_by_bb_count(self):
+        return self.annotate(cnt=models.Count("bb")).order_by("-cnt")
+
+
+class RubricManager(models.Manager):
+    # def get_queryset(self):
+    #     return super().get_queryset().order_by('order', 'name')
+
+    # def order_by_bb_count(self):
+    #     return super().get_queryset().annotate(
+    #         cnt=models.Count('bb')).order_by('-cnt')    
+
+    def get_queryset(self):
+        return RubricQuerySet(self.model, using=self._db)
+
+    def order_by_bb_count(self):
+        return self.get_queryset().order_by_bb_count()
+
+
 # class Child(models.Model):
 #     name = models.CharField(max_length=30)
 #     GENDER = (
@@ -101,6 +121,18 @@ class Rubric(models.Model):
 
     order = models.SmallIntegerField(default=0, db_index=True)
 
+    # Диспетчер записей
+    # objects = models.Manager()
+    # bbs = RubricManager()
+    
+    # objects = RubricManager()
+
+    # objects = RubricQuerySet.as_manager()
+    
+    # Диспетчеры и Наборы записей
+    objects = models.Manager.from_queryset(RubricQuerySet)()
+    
+
     def __str__(self):
         return f'{self.name}'
 
@@ -116,6 +148,10 @@ class RevRubric(Rubric):
         proxy = True
         ordering = ['-name']
 
+# Диспетчер записей по цене в Bb
+class BbManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().order_by('price')
 
 class Bb(models.Model):
     # KINDS = (
@@ -189,6 +225,10 @@ class Bb(models.Model):
     # email = models.EmailField()
     # url = models.URLField()
     # slug = models.SlugField()
+
+    # Диспетчер записей по цене в Bb
+    objects = models.Manager()
+    by_price = BbManager()
 
     def title_and_price(self):
         if self.price:

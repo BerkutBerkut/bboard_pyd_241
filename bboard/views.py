@@ -2,6 +2,7 @@ from django.contrib.auth import get_user
 from django.contrib.auth.decorators import login_required, user_passes_test, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.paginator import Paginator
+from django.db import transaction, DatabaseError
 from django.db.models import Count
 from django.forms import modelformset_factory
 from django.forms.models import inlineformset_factory
@@ -270,6 +271,11 @@ def bbs(request, rubric_id):
     return render(request, 'bboard/bbs.html', context)
 
 
+def commit_handler():
+    pass
+    # Действия после подтверждения транзакции
+
+
 # def add_icecream(request):
 #     if request.method == "POST":
 #         form = IcecreamForm(request.POST)
@@ -336,3 +342,52 @@ def manage_icecreams(request):
 # Контроллер успешной обработки
 def success_view(request):
     return render(request, 'bboard/success.html')
+
+
+# @transaction.non_atomic_requests # не атомарные запросы 'ATOMIC_REQUEST': False,
+@transaction.atomic  # атомарные запросы 'ATOMIC_REQUEST': True
+def my_view(request):
+    # if formset.is_valid():
+    #     with transaction.atomic():
+    #         for form in formset:
+    #             if form.cleaned_data:
+    #                 with transaction.atomic():
+    #                     pass
+
+    # try:
+    #     with transaction.atomic():
+    #         # сохранить данные в БД
+    #         pass
+    # except DatabaseError:
+    #     # Реагируем на ошибки
+    #     pass
+
+    # bbs = Bb.objects.select_for_update().filter(price__lt=100)
+    bbs = Bb.objects.select_for_update(skip_locked=True, 
+                                       of=('self', 'rubric')).filter(price__lt=100)
+    # with transaction.atomic():
+    #     for bb in bbs:
+    #         bb.price = 100
+    #         bb.save()
+
+    # if form.is_valid():
+    #     try:
+    #         form.save()
+    #         transaction.commit()
+    #     except:
+    #         transaction.rollback()
+
+    # if formset.is_valid():
+    #     for form in formset:
+    #         if form.cleaned_data:
+    #             sp = transaction.savepoint()
+    #             try:
+    #                 form.save()
+    #                 transaction.savepoint_commit(sp)
+    #             except:
+    #                 transaction.savepoint_rollback(sp)
+    #             transaction.commit()
+
+    #             transaction.on_commit(commit_handler)
+
+    return redirect('bboard:index')
