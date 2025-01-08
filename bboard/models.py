@@ -60,6 +60,17 @@ class RubricManager(models.Manager):
 #     child = models.ForeignKey(Child, on_delete=models.PROTECT)
 
 
+class IcecreamManager(models.Manager):
+    def expensive_icecreams(self, min_price):
+        """Получить все мороженные с ценой выше указанной."""
+        return self.filter(price__gte=min_price)
+    
+class IcecreamQuerySet(models.QuerySet):
+    def cheap_icecreams(self, max_price):
+        """Мороженное дешевле указанной цены."""
+        return self.filter(price__lte=max_price)
+
+
 class Icecream(models.Model):
     name = models.CharField(max_length=30)
     content = models.TextField(
@@ -76,6 +87,13 @@ class Icecream(models.Model):
         default=0,
         verbose_name="Цена",
     )
+
+    # Диспетчер записей
+    objects = models.Manager()
+    # Кастомный диспетчер
+    objects = IcecreamManager()
+    # Кастомный диспетчер с использованием QuerySet
+    objects = IcecreamQuerySet.as_manager()
 
     def __str__(self):
         return self.name
