@@ -1,0 +1,12 @@
+{% extends "layout/basic.html" %}
+
+{%  block content %}
+<h2>Информация о пользователе</h2>
+<p>Имя пользователя: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Суперпользователь: {{ user.is_superuser }}</p>
+<p>Группы: {{ user.group.all|join:", "}}</p>
+<p>Дата последнего входа: {{ user.last_login }}</p>
+<p>Дата регистрации: {{ user.date_joined }}</p>
+<p>Разрешения: {{ user.get_all_permissions }}</p>
+{% endblock %}

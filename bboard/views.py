@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, user_passes_test, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.paginator import Paginator
@@ -271,6 +272,15 @@ def bbs(request, rubric_id):
     return render(request, 'bboard/bbs.html', context)
 
 
+@login_required
+def user_info(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    
+    print(f"Имя пользователя {user.username}")
+    print(f"Является ли суперпользователем: {user.is_superuser}")
+    print(f"Группы пользователя: {[group.name for group in user.groups.all()]}")
+    return render(request, 'bboard/user_info.html', {'user': user})
+
 def commit_handler():
     pass
     # Действия после подтверждения транзакции
@@ -345,49 +355,49 @@ def success_view(request):
 
 
 # @transaction.non_atomic_requests # не атомарные запросы 'ATOMIC_REQUEST': False,
-@transaction.atomic  # атомарные запросы 'ATOMIC_REQUEST': True
-def my_view(request):
-    # if formset.is_valid():
-    #     with transaction.atomic():
-    #         for form in formset:
-    #             if form.cleaned_data:
-    #                 with transaction.atomic():
-    #                     pass
+# @transaction.atomic  # атомарные запросы 'ATOMIC_REQUEST': True
+# def my_view(request):
+#     # if formset.is_valid():
+#     #     with transaction.atomic():
+#     #         for form in formset:
+#     #             if form.cleaned_data:
+#     #                 with transaction.atomic():
+#     #                     pass
 
-    # try:
-    #     with transaction.atomic():
-    #         # сохранить данные в БД
-    #         pass
-    # except DatabaseError:
-    #     # Реагируем на ошибки
-    #     pass
+#     # try:
+#     #     with transaction.atomic():
+#     #         # сохранить данные в БД
+#     #         pass
+#     # except DatabaseError:
+#     #     # Реагируем на ошибки
+#     #     pass
 
-    # bbs = Bb.objects.select_for_update().filter(price__lt=100)
-    bbs = Bb.objects.select_for_update(skip_locked=True, 
-                                       of=('self', 'rubric')).filter(price__lt=100)
-    # with transaction.atomic():
-    #     for bb in bbs:
-    #         bb.price = 100
-    #         bb.save()
+#     # bbs = Bb.objects.select_for_update().filter(price__lt=100)
+#     bbs = Bb.objects.select_for_update(skip_locked=True,
+#                                        of=('self', 'rubric')).filter(price__lt=100)
+#     # with transaction.atomic():
+#     #     for bb in bbs:
+#     #         bb.price = 100
+#     #         bb.save()
 
-    # if form.is_valid():
-    #     try:
-    #         form.save()
-    #         transaction.commit()
-    #     except:
-    #         transaction.rollback()
+#     # if form.is_valid():
+#     #     try:
+#     #         form.save()
+#     #         transaction.commit()
+#     #     except:
+#     #         transaction.rollback()
 
-    # if formset.is_valid():
-    #     for form in formset:
-    #         if form.cleaned_data:
-    #             sp = transaction.savepoint()
-    #             try:
-    #                 form.save()
-    #                 transaction.savepoint_commit(sp)
-    #             except:
-    #                 transaction.savepoint_rollback(sp)
-    #             transaction.commit()
+#     # if formset.is_valid():
+#     #     for form in formset:
+#     #         if form.cleaned_data:
+#     #             sp = transaction.savepoint()
+#     #             try:
+#     #                 form.save()
+#     #                 transaction.savepoint_commit(sp)
+#     #             except:
+#     #                 transaction.savepoint_rollback(sp)
+#     #             transaction.commit()
 
-    #             transaction.on_commit(commit_handler)
+#     #             transaction.on_commit(commit_handler)
 
-    return redirect('bboard:index')
+#     return redirect('bboard:index')
