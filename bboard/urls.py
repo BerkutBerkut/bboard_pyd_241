@@ -10,7 +10,7 @@ from bboard.views import (index, by_rubric, BbCreateView,
 # from bboard.views import add_icecream
 from bboard.views import  manage_icecreams, success_view
 # from bboard.views import create_icecream
-from bboard.views import icecream_list
+from bboard.views import icecream_list, search
 from bboard.views import user_info
 
 app_name = 'bboard'
@@ -42,6 +42,7 @@ urlpatterns = [
     # path('add_icecream/', add_icecream, name='add_icecream'),
     path("icecream_list/", icecream_list, name="icecream_list"),
     path("user_info/<int:user_id>/", user_info, name="user_info"),
+    path('search/', search, name='search'),
     path("", index, name="index"),
     # path('', BbIndexView.as_view(), name='index'),
 ]

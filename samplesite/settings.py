@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'captcha', 
+
     'bboard',  # 'bboard.apps.BboardConfig',
     'testapp',
     # 'todolist',
@@ -146,3 +148,19 @@ DEFAULT_CHARSET = 'utf-8'
 LOGIN_REDIRECT_URL = 'bboard:index'
 LOGOUT_REDIRECT_URL = 'bboard:index'
 # PASSWORD_RESET_TIMEOUT = 60 * 60 * 24 * 3  # 259_200
+
+# CAPTCHA
+# CAPTCHA_CHALLENGE_FUNCT ='captcha.helpers.random_char_challenge',
+# CAPTCHA_CHALLENGE_FUNCT ='captcha.helpers.math_challenge',
+# CAPTCHA_CHALLENGE_FUNCT ='captcha.helpers.word_challenge'
+
+# CAPTCHA_TIMEOUT = 5 # minutes
+CAPTCHA_LENGTH = 6 # 4 ПО УМОЛЧАНИЮ
+
+# CAPTCHA_WORDS_DICTIONARY = BASE_DIR / 'static/bboard/words.txt'
+
+# CAPTCHA_LETTER_ROTATION = (-95, -95)
+
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 2_621_440 # по умолчанию 2.5 Mb
+DATA_UPLOAD_MAX_NUMBER_FIELD = 1000
