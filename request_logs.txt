@@ -1,0 +1,2 @@
+Request Method: GET, Parameters: {'param1': 'value1', 'param2': 'value2'}
+Request Method: GET, Parameters: {'param1': 'value1', 'param2': 'value2'}

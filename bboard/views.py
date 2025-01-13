@@ -25,6 +25,7 @@ from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteVi
 from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
 from bboard.models import Bb, Rubric, Icecream
 
+import logging
 
 # Основной (вернуть)
 # def index(request):
@@ -418,3 +419,52 @@ def search(request):
 
     context = {'form': sf}
     return render(request, 'bboard/search.html', context)
+
+# Возвращение строки на фронтенд
+def return_string(request):
+    return HttpResponse("Hello, this is a plain text string!")
+
+# Возвращение строки с HTML-тегами
+def return_html(request):
+    html_content = "<h1>Welcome to Django!</h1><p>This is a response eith HTML tags.</p>"
+    return HttpResponse(html_content)
+
+# Формирование массива данных
+def return_json(request):
+    # Список данных, сгенерированный с помощью list comprehesion
+    data_list = [f"Item {i}" for i in range(1, 11)] # Создаем массив
+    return JsonResponse({"data": data_list})
+
+# Получение параметров запроса
+def show_request_parameters(request):
+    if request.method == 'GET':
+        params = request.GET.dict() # Получение параметров GET
+    elif request.method == "POST":
+        params = request.POST.dict()  # Получение параметров POST
+    else:
+        params = {}
+
+    return JsonResponse(params)
+
+# Перенаправление при отсутствии логина
+def check_login(request):
+    if not request.user.is_authenticated: # Проверка авторизации Usera
+        return redirect('/login/') # Перенаправление на страницу логина
+    return JsonResponse({"message": "Вы вошли в систему."})
+
+# Контроллер для логирования
+logger = logging.getLogger('django.request')
+
+def log_request_data(request):
+    if request.method == 'GET':
+        params = request.GET.dict()
+    elif request.method == 'POST':
+        params = request.POST.dict()
+    else:
+        params = {}
+
+    # логируем данные запроса
+    logger.info(f"Request Method: {request.method}, Parameters: {params}")
+
+    return JsonResponse({"message": "Request logged successfully"})
+

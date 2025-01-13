@@ -154,6 +154,25 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_CHARSET = 'utf-8'
 
+# Логирование данных запроса в текстовый файл
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'request_logs.txt',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+
 # LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = 'bboard:index'
 LOGOUT_REDIRECT_URL = 'bboard:index'
