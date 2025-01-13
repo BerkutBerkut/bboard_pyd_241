@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'captcha', 
+    'django.contrib.postgres',
+    
+    'captcha',
 
     'bboard',  # 'bboard.apps.BboardConfig',
     'testapp',
-    'todolist',
+    # 'todolist',
 ]
 
 MIDDLEWARE = [
@@ -83,11 +85,19 @@ WSGI_APPLICATION = 'samplesite.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        # 'ATOMIC_REQUEST': True, # False,
-        # 'AUTOCOMMIT': False, # True,
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    #     # 'ATOMIC_REQUEST': True, # False,
+    #     # 'AUTOCOMMIT': False, # True,
+    # }
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "django_db",
+        "USER": "db_user",
+        "PASSWORD": "12345",
+        "HOST": "127.0.0.1",
+        "PORT": "5433",
     }
 }
 
