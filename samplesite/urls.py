@@ -19,6 +19,8 @@ from django.contrib.auth.views import (LoginView, LogoutView, PasswordChangeView
     PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView)
 from django.urls import path, include
 
+print("Загрузка маршрутов: ")
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/login/", LoginView.as_view(), name="login"),
@@ -51,7 +53,7 @@ urlpatterns = [
         PasswordResetCompleteView.as_view(),
         name="password_reset_complete",
     ),
-    path("todo/", include("todolist.urls", namespace="todo")),
+    path("todolist/", include("todolist.urls", namespace="todo")),
     path("testapp/", include("testapp.urls", namespace="testapp")),
     path("captcha/", include("captcha.urls")),
     path("", include("bboard.urls", namespace="bboard")),
