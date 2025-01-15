@@ -1,6 +1,7 @@
 from django.core import validators
 from django.core.exceptions import ValidationError
 from django.db import models
+# from precise_bbcode.fields import BBCodeTextCreator
 
 
 def validate_even(val):
@@ -64,7 +65,7 @@ class IcecreamManager(models.Manager):
     def expensive_icecreams(self, min_price):
         """Получить все мороженные с ценой выше указанной."""
         return self.filter(price__gte=min_price)
-    
+
 class IcecreamQuerySet(models.QuerySet):
     def cheap_icecreams(self, max_price):
         """Мороженное дешевле указанной цены."""
@@ -221,6 +222,12 @@ class Bb(models.Model):
         blank=True,
         verbose_name='Описание',
     )
+
+    # content = models.BBCodeTextField(
+    #     null=True,
+    #     blank=True,
+    #     verbose_name="Описание",
+    # )
 
     # price = models.FloatField(null=True, blank=True, verbose_name='Цена')
     price = models.DecimalField(

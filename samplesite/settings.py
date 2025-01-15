@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django.contrib.postgres',
+    # 'django.contrib.postgres',
     
     'captcha',
+    'precise_bbcode',
 
     'bboard',  # 'bboard.apps.BboardConfig',
     'testapp',
@@ -85,20 +86,20 @@ WSGI_APPLICATION = 'samplesite.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    #     # 'ATOMIC_REQUEST': True, # False,
-    #     # 'AUTOCOMMIT': False, # True,
-    # }
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "django_db",
-        "USER": "db_user",
-        "PASSWORD": "12345",
-        "HOST": "127.0.0.1",
-        "PORT": "5433",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ATOMIC_REQUEST': True, # False,
+        # 'AUTOCOMMIT': False, # True,
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql_psycopg2",
+    #     "NAME": "django_db",
+    #     "USER": "db_user",
+    #     "PASSWORD": "12345",
+    #     "HOST": "127.0.0.1",
+    #     "PORT": "5433",
+    # }
 }
 
 
@@ -141,6 +142,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 # STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -191,5 +195,9 @@ CAPTCHA_LENGTH = 6 # 4 ПО УМОЛЧАНИЮ
 # CAPTCHA_LETTER_ROTATION = (-95, -95)
 
 
-DATA_UPLOAD_MAX_MEMORY_SIZE = 2_621_440 # по умолчанию 2.5 Mb
-DATA_UPLOAD_MAX_NUMBER_FIELD = 1000
+# DATA_UPLOAD_MAX_MEMORY_SIZE = 2_621_440 # по умолчанию 2.5 Mb
+# DATA_UPLOAD_MAX_NUMBER_FIELD = 1000
+
+# BBCODE
+# BBCODE_NEWLINE = '<br>'
+
