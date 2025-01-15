@@ -403,6 +403,7 @@ def success_view(request):
 
 #     return redirect('bboard:index')
 
+# Форма не связанная с моделью
 def search(request):
     if request.method == 'POST':
         sf = SearchForm (request.POST)

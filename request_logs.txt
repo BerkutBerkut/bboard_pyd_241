@@ -1,2 +1,116 @@
 Request Method: GET, Parameters: {'param1': 'value1', 'param2': 'value2'}
 Request Method: GET, Parameters: {'param1': 'value1', 'param2': 'value2'}
+Not Found: /favicon.ico
+Not Found: /todo_create/
+Internal Server Error: /todolist/create/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 11, in todo_create
+    return render(request, 'todo_create.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todo_create.html
+Not Found: /create/
+Not Found: /todo/create/
+Not Found: /todolist/todo_create/
+Internal Server Error: /todolist/create/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 11, in todo_create
+    return render(request, 'todo_create.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todo_create.html
+Not Found: /todo_list/
+Internal Server Error: /todolist/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view todolist.views.todo_list didn't return an HttpResponse object. It returned None instead.
+Not Found: /tasks/
+Not Found: /todolist/tasks/
+Not Found: /todocreate/
+Not Found: /todo_create/
+Not Found: /todo_detail/
+Not Found: /todo_detail/
+Not Found: /todo_create/
+Not Found: /todo_create/
+Not Found: /todolist/todo_create/
+Not Found: /todolist/todo_create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Not Found: /create/
+Not Found: /create_icecream/
+Not Found: /create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Not Found: /todolist/todo_create/
+Not Found: /todo_create/
+Not Found: /todo_create/
+Not Found: /create_icecream/
+Not Found: /create/
+Not Found: /create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Not Found: /todo_create/
+Not Found: /todo_create/
+Not Found: /todo_detail/1//
+Not Found: /todo_list/
+Not Found: /create_icecream/
+Not Found: /create/
+Not Found: /create/
+Not Found: /user_info/
+Not Found: /user_info/
+Not Found: /manage_icecream/
+Not Found: /sms_list/
+Not Found: /todolist/todo_create/
+Not Found: /todolist/todo_create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Not Found: /todolist/1/
+Not Found: /todolist/2/
+Not Found: /todolist/3/
+Not Found: /todo_create/ / -H "Content-Type: application/json" / -d '{"title": "Test Task", "description": "This is a test task.", "completed": false}'
+Not Found: /todolist/todo_create/ / -H "Content-Type: application/json" / -d '{"title": "Test Task", "description": "This is a test task.", "completed": false}'
+Not Found: /todo_create/
+Not Found: /todo_create/
