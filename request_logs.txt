@@ -777,3 +777,25 @@ Traceback (most recent call last):
     return super().execute(query, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 django.db.utils.OperationalError: no such table: precise_bbcode_bbcodetag
+Not Found: /favicon.ico
+Not Found: /todo_create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Not Found: /todolist/todo_detail/
+Not Found: /todolist/1/
+Method Not Allowed: /todolist/todo_create/
+Not Found: /todolist/todo_detail/
+Not Found: /todolist/todo_detail/1/
+Not Found: /todolist/todo_delete/3/
+Not Found: /todolist/todo_delete/3/
+Not Found: /todo_delete/2/
+Not Found: /todolist/todo_delete/2/
+Method Not Allowed: /todolist/delete/2/
+Method Not Allowed: /todolist/delete/2/
+Not Found: /todolist/todo_detail/5/
+Not Found: /todolist/5/
+Not Found: /todolist/5/
+Not Found: /todolist/5/
+Not Found: /todo_detail/5/
+Not Found: /todo_detail/5/
+Not Found: /todolist/5/
