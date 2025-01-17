@@ -133,6 +133,7 @@ class SearchForm(forms.Form):
     rubric = forms.ModelChoiceField(queryset=Rubric.objects.all(), label='Рубрика')
 
 
+
 class IcecreamForm(forms.ModelForm):
     class Meta:
         model = Icecream

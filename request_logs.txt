@@ -799,3 +799,447 @@ Not Found: /todolist/5/
 Not Found: /todo_detail/5/
 Not Found: /todo_detail/5/
 Not Found: /todolist/5/
+Not Found: /todolist/display_form/
+Not Found: /todolist/simple_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /simple_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /simple_form/
+Not Found: /todolist/sample_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /simple_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /handle_form/
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 84, in handle_form
+    form + SimpleForm()
+    ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+Not Found: /handle_form/
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 84, in handle_form
+    form + SimpleForm()
+    ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+Not Found: /handle_form/
+Not Found: /handle_form/
+Not Found: /handle_form/
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 84, in handle_form
+    form + SimpleForm()
+    ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+Not Found: /simple_form/
+Not Found: /simple_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /todolist/display_form/
+Not Found: /display_form/
+Not Found: /handle_form/
+Not Found: /handle_form/
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 84, in handle_form
+    form =+ SimpleForm()
+          ^^^^^^^^^^^^^^
+TypeError: bad operand type for unary +: 'SimpleForm'
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 84, in handle_form
+    form =+ SimpleForm()
+          ^^^^^^^^^^^^^^
+TypeError: bad operand type for unary +: 'SimpleForm'
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 85, in handle_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /handle_form/
+Not Found: /handle_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /simple_form/
+Not Found: /simple_form/
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in display_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 85, in handle_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 85, in handle_form
+    return render(request, "display_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: display_form.html
+Not Found: /favicon.ico
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in simple_form
+    return render(request, "simple_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: simple_form.html
+Internal Server Error: /todolist/simple_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 70, in simple_form
+    return render(request, "simple_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: simple_form.html
+Not Found: /simple_form/
+Not Found: /handle_form/
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 85, in handle_form
+    return render(request, "simple_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: simple_form.html
+Internal Server Error: /todolist/handle_form/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 85, in handle_form
+    return render(request, "simple_form.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: simple_form.html

@@ -188,7 +188,7 @@ LOGOUT_REDIRECT_URL = 'bboard:index'
 # CAPTCHA_CHALLENGE_FUNCT ='captcha.helpers.word_challenge'
 
 # CAPTCHA_TIMEOUT = 5 # minutes
-CAPTCHA_LENGTH = 6 # 4 ПО УМОЛЧАНИЮ
+CAPTCHA_LENGTH = 4 # 4 ПО УМОЛЧАНИЮ
 
 # CAPTCHA_WORDS_DICTIONARY = BASE_DIR / 'static/bboard/words.txt'
 

@@ -3,7 +3,8 @@ from django.urls import path
 
 from todolist.views import (todo_list, todo_detail, todo_create, 
                             todo_update, todo_delete, 
-                            todo_archived, todo_search)
+                            todo_archived, todo_search, 
+                            simple_form, handle_form)
 
 app_name = 'todolist'
 
@@ -20,4 +21,7 @@ urlpatterns = [
     # re_path(r"^delete/(?P<todo_id>\d+)/$", todo_delete, name="todo_delete"),
     path('todo_archived/<int:todo_id>/', todo_archived, name='todo_archivede'),
     path('todo_search/<int:todo_id>/', todo_search, name='todo_search'),
+
+    path('simple_form/', simple_form, name='simple_form'),
+    path('handle_form/', handle_form, name='handle_form'),
 ]

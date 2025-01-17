@@ -1,0 +1,14 @@
+{% extends "layout/basic.html" %}
+
+
+{% block title %}Простая форма{% endblock %}
+
+{% block content %}
+<h2>Ручная форма</h2>
+<form action="{% url 'todolist:handle_form' %}" method="POST">
+    {% csrf_token %}
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}

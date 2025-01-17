@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from todolist.forms import SimpleForm
 
 import json
 
@@ -53,16 +54,32 @@ def todo_delete(request, todo_id):
         task.delete()
         return JsonResponse({"message": "Task deleted successfuly!"}, status=200)
     return HttpResponse(status=405)
-    
-
 
 def todo_update(request, todo_id):
     pass
 
-
 def todo_archived(request, todo_id):
     pass
 
-
 def todo_search(request, todo_id):
     pass
+
+
+def simple_form(request):
+    form = SimpleForm()
+    return render(request, "todolist/simple_form.html", {"form": form})
+
+def handle_form(request):
+    if request.method == "POST":
+        form = SimpleForm(request.POST)
+        if form.is_valid():
+            # Сохранение данных в модели Todo
+            Todo.objects.create(
+                title=form.cleaned_data["title"],
+                description=form.cleaned_data["description"],
+                completed=form.cleaned_data["completed"]
+            )
+            return HttpResponse("Форма обработана и задача сохранена успешно")
+    else:
+        form = SimpleForm()
+    return render(request, "todolist/simple_form.html", {"form": form})
