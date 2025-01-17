@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     
     'captcha',
     'precise_bbcode',
+    'django_bootstrap5',
 
     'bboard',  # 'bboard.apps.BboardConfig',
     'testapp',
@@ -201,3 +202,8 @@ CAPTCHA_LENGTH = 4 # 4 ПО УМОЛЧАНИЮ
 # BBCODE
 # BBCODE_NEWLINE = '<br>'
 
+BOOTSTRAP5 = {
+    "required_css_class": "required",
+    "success_css_class": "has-success",
+    "error_css_class": "has-error",
+}
