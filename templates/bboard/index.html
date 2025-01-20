@@ -25,6 +25,7 @@
                 {{ bb.rubric.name }}</a></p>
             <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
         </div>
+        
     {% endfor %}
 
     {% bootstrap_pagination page size='sm' pages_to_show=5 %}
