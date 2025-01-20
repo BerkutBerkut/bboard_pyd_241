@@ -7,7 +7,25 @@ from django.forms.fields import DecimalField
 from django.forms.models import BaseModelFormSet
 from captcha.fields import CaptchaField
 
-from bboard.models import Bb, Rubric, Icecream
+from bboard.models import Bb, Rubric, Icecream, Img
+
+
+class ImgForm(ModelForm):
+    img = forms.ImageField(
+                        label='Изображение',
+                        #    widget=forms.widgets.ClearableFileInput(attrs={'multiple': True}), 
+                        validators=[validators.FileExtensionValidator(
+                               allowed_extensions=('gif', 'jpg', 'png'))], 
+                        error_messages={
+                                'invalid_extension': 'Этот формат не поддерживается'
+                           })
+    
+    desc = forms.CharField(label='Описание',
+                           widget=forms.widgets.Textarea())
+
+    class Meta:
+        model = Img
+        fields = '__all__'
 
 
 # Основной (вернуть)

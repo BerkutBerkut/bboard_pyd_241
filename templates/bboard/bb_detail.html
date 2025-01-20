@@ -8,7 +8,7 @@
 {% block content %}
 
     {% lst ', ' '1' '2' '3' '4' %}
-    <!-- {% ulist '1' '2' '3' '4' %} -->
+    {% ulist '1' '2' '3' '4' %}
 
     <div>
         <p>Рубрика: <a href="{% url 'bboard:by_rubric' bb.rubric.pk %}">
@@ -23,6 +23,13 @@
         <!-- <p>Цена: <strong>{{ bb.price|floatformat:'2g' }}</strong> тг.</p> -->
         <p>Цена: <strong>{{ bb.price|cur }}</strong></p>
         <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+
+        <!-- {% if bb.img %}
+            {% for img in imgs %}
+                <div><img src="{{ img.img/url }}"></div>
+            {% endfor %}
+        {% endif %} -->
+
         <p>
             <a href="{% url 'bboard:edit' bb.pk %}">Изменить</a> |
             <a href="{% url 'bboard:delete' bb.pk %}">Удалить</a>
