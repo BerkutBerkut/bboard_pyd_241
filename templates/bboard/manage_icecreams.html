@@ -1,9 +1,26 @@
 {% extends "layout/basic.html" %}
 
+{% load filtertags %}
 
 {% block title %}Управление мороженным{% endblock %}
 
+
 {% block content %}
+
+<p><b>{{ "THIS PAGE WILL BE CUT TO HALF" | cut_half }}</b></p>
+
+<p>{{ "THIS PAGE WILL BE CUT TO HALF" | to_lower }}</p>
+
+<p><b>{{ "THIS PAGE WILL BE CUT TO HALF" | delete_space }}</b></p>
+
+{% split_string "Алматы, Астана, Караганды" "," as cities %}
+<ul>
+    {% for city in cities %}
+    <li>{{ city }}</li>
+    {% endfor %}
+</ul>
+
+
 <h1>Управление мороженым</h1>
 {% if error %}
    <p style="color: red;">{{ error }}</p>
