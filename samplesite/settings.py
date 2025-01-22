@@ -33,22 +33,24 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     # 'django.contrib.postgres',
-    
-    'captcha',
-    'precise_bbcode',
-    'django_bootstrap5',
 
-    'bboard',  # 'bboard.apps.BboardConfig',
-    'testapp',
-    'todolist',
+    "captcha",
+    "precise_bbcode",
+    "django_bootstrap5",
+    "easy_thumbnails",
+
+    "bboard",  # 'bboard.apps.BboardConfig',
+    "testapp",
+    "todolist",
+
+    "django_cleanup",
 ]
 
 MIDDLEWARE = [
@@ -207,3 +209,43 @@ BOOTSTRAP5 = {
     "success_css_class": "has-success",
     "error_css_class": "has-error",
 }
+
+# настройка easy-thumbnails
+THUMBNAIL_ALIASES = {
+    "bboard.Bb.img": {
+        "default": {
+            "size": (500, 300),
+            "crop": "scale",
+        },
+    },
+    "testapp": {
+        "default": {
+            "size": (400, 300),
+            "crop": "smart",
+            "bw": True,
+        },
+    },
+    "": {
+        "default": {
+            "size": (180, 240),
+            'crop': 'scale',
+        },
+        "big": {
+            'size': (480, 640),
+            'crop': '10,10'
+        },
+    },
+}
+
+THUMBNAIL_DEFAULT_OPTIONS = {
+    'quality': 90,
+    'subsampling': 1,
+}
+
+# THUMBNAIL_MEDIA_URL = "/media/thumbnail/"
+# THUMBNAIL_MEDIA_ROOT = BASE_DIR / "media/thumbnail/"
+THUMBNAIL_SUBDIR = 'thumbs'
+# THUMBNAIL_PREFIX = "thumbs"
+# THUMBNAIL_EXTENSION = 'jpg'
+# THUMBNAIL_TRANSPARENCY_EXTENSION = 'png'
+THUMBNAIL_PRESERVE_EXTENSION = ('png',)

@@ -1,6 +1,7 @@
 {% extends "layout/basic.html" %}
 {% load bbcode_tags %}
 {% load filtertags %}
+{% load thumbnail %}
 
 
 {% block title %}{{ bb.title }}{% endblock %}
@@ -15,6 +16,15 @@
                                                 {{ bb.rubric.name }}</a></p>
         <h2>{{ bb.title }}</h2>
 
+        {% if bb.img %}
+        <p>
+            <img src="{{ bb.img.url }}" alt="{{ bb.title }}" title="{{ bb.title }}">
+            {# <img src="{{ bb.img|thumbnail.url: 'default' }}" alt="{{ bb.title }}" title="{{ bb.title }}"> #}
+            {# <img src="{% thumbnail bb.img 'default' %}" alt="{{ bb.title }}" title="{{ bb.title }}"> #}
+            {# <img src="{% thumbnail bb.img 'default' bw=True %}" alt="{{ bb.title }}" title="{{ bb.title }}"> #}
+            {# <img src="{% thumbnail bb.img '300x200' crop='smart' %}" alt="{{ bb.title }}" title="{{ bb.title }}"> #}
+        </p>
+        {% endif %}
         <!-- <p>{{ bb.content }}</p> -->
 
         <p>{% bbcode bb.content %}</p>
@@ -24,11 +34,11 @@
         <p>Цена: <strong>{{ bb.price|cur }}</strong></p>
         <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
 
-        <!-- {% if bb.img %}
-            {% for img in imgs %}
-                <div><img src="{{ img.img/url }}"></div>
-            {% endfor %}
-        {% endif %} -->
+        {# {% if bb.img %} #}
+            {# {% for img in imgs %} #}
+                {# <div><img src="{{ img.img/url }}"></div> #}
+            {# {% endfor %} #}
+        {# {% endif %} #}
 
         <p>
             <a href="{% url 'bboard:edit' bb.pk %}">Изменить</a> |

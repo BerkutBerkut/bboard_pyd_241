@@ -36,13 +36,13 @@ class BbForm(ModelForm):
         error_messages={'invalid': 'Слишком короткое название товара'}
     )
 
-    captcha = CaptchaField(
-        label="Введите текст с картинки",
-        # generator='captcha.helpers.random_char_challenge',
-        # generator='captcha.helpers.random_math_challenge',
-        # generator='captcha.helpers.random_word_challenge',
-        error_messages={"invalid": "Неправильный текст"},
-    )
+    # captcha = CaptchaField(
+    #     label="Введите текст с картинки",
+    #     # generator='captcha.helpers.random_char_challenge',
+    #     # generator='captcha.helpers.random_math_challenge',
+    #     # generator='captcha.helpers.random_word_challenge',
+    #     error_messages={"invalid": "Неправильный текст"},
+    # )
 
     def clean_title(self):
         val = self.cleaned_data['title']
@@ -65,7 +65,7 @@ class BbForm(ModelForm):
 
     class Meta:
         model = Bb
-        fields = ('title', 'content', 'price', 'rubric')
+        fields = ('title', 'content', 'price', 'rubric', 'img')
         help_texts = {'rubric': 'Не забудьте выбрать рубрику!'}
 
 

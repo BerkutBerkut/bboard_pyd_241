@@ -5,6 +5,7 @@ from django.core import validators
 from django.core.exceptions import ValidationError
 from django.db import models
 # from precise_bbcode.fields import BBCodeTextCreator
+from easy_thumbnails.fields import ThumbnailerImageField
 
 
 def get_timestamp_path(instance, filename):
@@ -38,7 +39,7 @@ class Img(models.Model):
     class Meta:
         verbose_name = 'Изображение'
         verbose_name_plural = 'Изображение'
-        
+
 
 class RubricQuerySet(models.QuerySet):
     def order_by_bb_count(self):
@@ -271,7 +272,14 @@ class Bb(models.Model):
     # archive = models.FileField(upload_to='archives/')
     # archive = models.FileField(upload_to='archives/%Y/%m/%d')
     # file = models.FileField(upload_to=get_timestamp_path)
-  
+
+    img = models.ImageField(blank=True,
+                            upload_to=get_timestamp_path,
+                             verbose_name='Изображение')
+
+    # thumb = ThumbnailerImageField(
+    #     resize_source={'size': (400, 300), 'crop': 'scale'}, 
+    # )
 
     # Диспетчер записей по цене в Bb
     objects = models.Manager()
