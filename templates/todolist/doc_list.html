@@ -1,0 +1,18 @@
+{% extends "layout/basic.html" %}
+
+
+{% block title %}Загруженные файлы{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Список документов</h2>
+    <ul>
+        {% for doc in doc_objects %}
+        <li>
+            <a href="{{ doc.file.url }}" target="_blank">{{ doc.file.name }}</a><br>
+            <a href="{% url 'todolist:delete_doc' doc.pk %}" class="btn btn-danger">Удалить</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

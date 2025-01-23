@@ -3788,3 +3788,1561 @@ Not Found: /detail/13/...
 Not Found: /detail/18/...
 Not Found: /detail/18/...
 Not Found: /detail/18/...
+Not Found: /detail/20/...
+Not Found: /detail/19/...
+Not Found: /detail/15/...
+Not Found: /detail/9/...
+Not Found: /detail/10/...
+Not Found: /detail/8/...
+Not Found: /detail/7/...
+Not Found: /detail/16/...
+Not Found: /detail/18/...
+Not Found: /detail/13/...
+Not Found: /detail/1/...
+Not Found: /detail/1/...
+Not Found: /favicon.ico
+Not Found: /detail/18/...
+Not Found: /todolist/by_rubric/
+Not Found: /todolist/index/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Not Found: /todolist/create/
+Not Found: /todolist/todo_detail/
+Not Found: /todolist/upload_file/
+Not Found: /upload_file/
+Not Found: /todolist/upload_file/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\views.py", line 55, in index
+    return render(request, 'bboard/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'upload' not found. 'upload' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 94, in upload_file
+    return redirect('success')
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 94, in upload_file
+    return redirect('todolist: success')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' success' not found. ' success' is not a valid view function or pattern name.
+Not Found: /todolist/upload_file/todolist/success
+Not Found: /todolist/upload_file/todolist/success
+Not Found: /todolist/upload_file/todolist/success
+Not Found: /todolist/upload_file/todolist/success
+Not Found: /todolist/upload_file/todolist/success
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 94, in upload_file
+    return redirect('success')
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 94, in upload_file
+    return redirect('success')
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 96, in upload_file
+    return redirect("success")
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 96, in upload_file
+    return redirect("success")
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 96, in upload_file
+    return redirect("success")
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 100, in upload_file
+    return redirect("success")
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 100, in upload_file
+    return redirect("success")
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 100, in upload_file
+    return redirect("index")
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+Not Found: /todolist/upload_file/bb.index
+Not Found: /todolist/upload_file/bb.index
+Not Found: /todolist/upload_file/bb.index
+Not Found: /todolist/upload_file/bb.index
+Not Found: /todolist/upload_file/bboard/index
+Not Found: /todolist/upload_file/bboard/index
+Not Found: /todolist/upload_file/bboard/index
+Internal Server Error: /todolist/upload_file/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 100, in upload_file
+    return redirect("upload_file")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'upload_file' not found. 'upload_file' is not a valid view function or pattern name.
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/file_list/
+Not Found: /todolist/img_list/
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 118, in img_list
+    return render(request, "todolist/file_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todolist/file_list.html
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 118, in img_list
+    return render(request, "todolist/file_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todolist/file_list.html
+Internal Server Error: /todolist/doc_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 124, in doc_list
+    return render(request, "todolist/file_list.html", {"objects": objects})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todolist/file_list.html
+Not Found: /todolist/upload_file/
+Not Found: /todolist/upload_file/
+Internal Server Error: /todolist/upload_doc/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 113, in upload_doc
+    return render(request, "todolist/upload_file.html", {"form": form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todolist/upload_file.html
+Not Found: /upload/
+Not Found: /upload/
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' with arguments '('',)' not found. 1 pattern(s) tried: ['todolist/delete_img/(?P<pk>[0-9]+)/\\Z']
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' with arguments '('',)' not found. 1 pattern(s) tried: ['todolist/delete_img/(?P<pk>[0-9]+)/\\Z']
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' with arguments '('',)' not found. 1 pattern(s) tried: ['todolist/delete_img/(?P<pk>[0-9]+)/\\Z']
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"objects": objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.
+Internal Server Error: /todolist/img_list/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\todolist\views.py", line 119, in img_list
+    return render(request, "todolist/img_list.html", {"img_objects": img_objects})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_img' not found. 'delete_img' is not a valid view function or pattern name.

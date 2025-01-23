@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from todolist.forms import SimpleForm
+from todolist.forms import SimpleForm, ImgForm, DocForm
 
 import json
 
-from todolist.models import Todo
+from todolist.models import Todo, Img, Doc
 
 # Получение всех задач
 def todo_list(request):
@@ -83,3 +83,59 @@ def handle_form(request):
     else:
         form = SimpleForm()
     return render(request, "todolist/simple_form.html", {"form": form})
+
+
+def success(request):
+    return render(request, "todolist/success.html")
+
+
+# Загрузка изображений
+def upload_img(request):
+    if request.method == "POST":
+        form = ImgForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("todolist:success")
+    else:
+        form = ImgForm()
+    return render(request, "todolist/upload_img.html", {"img_form": form})
+
+
+# Загрузка документов
+def upload_doc(request):
+    if request.method == "POST":
+        form = DocForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("todolist:success")
+    else:
+        form = DocForm()
+    return render(request, "todolist/upload_doc.html", {"doc_form": form})
+
+
+# Вывод изображений
+def img_list(request):
+    img_objects = Img.objects.all()
+    return render(request, "todolist/img_list.html", {"img_objects": img_objects}) 
+
+
+# Вывод документов
+def doc_list(request):
+    doc_objects = Doc.objects.all()
+    return render(request, "todolist/doc_list.html", {"doc_objects": doc_objects})
+
+
+# удаление картинок
+def delete_img(request, pk):
+    img = Img.objects.get(pk=pk)
+    img.img.delete(save=False)
+    img.delete()
+    return redirect("todolist:img_list")
+
+
+# удаление файлов
+def delete_doc(request, pk):
+    file = Doc.objects.get(pk=pk)
+    file.file.delete(save=False)
+    file.delete()
+    return redirect("todolist:doc_list")

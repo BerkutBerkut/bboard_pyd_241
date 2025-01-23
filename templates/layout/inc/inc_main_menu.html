@@ -2,6 +2,8 @@
     <a href="{% url 'bboard:index' %}">Главная</a>
     <a href="{% url 'bboard:add' %}">Добавить</a>
     <a href="{% url 'bboard:rubrics' %}">Рубрики</a>
+    <a href="{% url 'todolist:upload_img' %}">Добавить картирку в задачи</a>
+    <a href="{% url 'todolist:upload_doc' %}">Добавить файл в задачи</a>
     {% if user.is_anonymous %}
         <a href="{% url 'login' %}">Вход</a>
     {% else %}
