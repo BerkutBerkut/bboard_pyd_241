@@ -5,7 +5,17 @@ from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelatio
 
 class AdvUser(models.Model):
     is_activated = models.BooleanField(default=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+# class ProFile(models.Model):
+#     is_activated = models.BooleanField(default=True)
+#     phone = models.CharField(max_length=20)
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+# class AdvUser(AbstractUser):
+#     phone = models.CharField(max_length=20)
+
+# class AdvUser(User):
+#     phone = models.CharField(max_length=20)
 
 
 class Spare(models.Model):
@@ -67,7 +77,6 @@ class MegaPrivateMessage(PrivateMessage):
 
     def __str__(self):
         return f"MegaPrivateMessage to {self.user.username}, Priority: {self.priority}"
-    
 
 
 # 2. Абстрактные модели
@@ -97,5 +106,3 @@ class SMS(models.Model):
 
     def __str__(self):
         return f"From {self.sender} to {self.receiver}"
-    
-    
