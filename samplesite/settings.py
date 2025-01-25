@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-from django.conf.global_settings import STATICFILES_DIRS, ABSOLUTE_URL_OVERRIDES
+from captcha.conf.settings import CAPTCHA_TIMEOUT, CAPTCHA_LENGTH
+from django.conf.global_settings import STATICFILES_DIRS, ABSOLUTE_URL_OVERRIDES, MEDIA_URL, AUTH_USER_MODEL
+from django_bootstrap5.core import BOOTSTRAP5
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,17 +42,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 'django.contrib.postgres',
-
     "captcha",
     "precise_bbcode",
     "django_bootstrap5",
     "easy_thumbnails",
-
     "bboard",  # 'bboard.apps.BboardConfig',
     "testapp",
     "todolist",
-
-    "django_cleanup",
+    "django_cleanup",  # всегда в самом низу!!!
 ]
 
 MIDDLEWARE = [
@@ -208,6 +207,7 @@ CAPTCHA_LENGTH = 4 # 4 ПО УМОЛЧАНИЮ
 
 # BBCODE
 # BBCODE_NEWLINE = '<br>'
+# BBCODE_ALLOW_CUSTOM_TAGS = False
 
 BOOTSTRAP5 = {
     "required_css_class": "required",

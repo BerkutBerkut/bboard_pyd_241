@@ -1,5 +1,5 @@
 {% extends "layout/basic.html" %}
-
+{% load thumbnail %}
 
 {% block title %}Загруженные файлы{% endblock %}
 
@@ -9,7 +9,10 @@
     <ul>
         {% for img in img_objects %}
             <li>
-                <img src="{{ img.img.url }}" alt="Image" style="max-width: 200px;"><br>
+                <!-- <img src="{{ img.img.url }}" alt="Image" style="max-width: 200px;"><br> -->
+                <img src="{% thumbnail img.img 'default' bw=True %}" alt="Image" style="max-width: 200px;"><br>
+                <!-- <img src="{% thumbnail img.img '300x200' crop='smart' %}" alt="Image" style="max-width: 200px;"><br> -->
+                <!-- <img src="{% thumbnail img.img 'default' %}" alt="Image" style="max-width: 200px;"><br> -->
                 {{ img.img.name }}<br>
                 <a href="{% url 'todolist:delete_img' img.pk %}" class="btn btn-danger">Удалить</a>
             </li>
