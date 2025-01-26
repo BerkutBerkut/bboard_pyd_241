@@ -53,6 +53,11 @@ def index(request):
 
     context = {'bbs': page.object_list, 'rubrics': rubrics, 'page': page}
 
+    # if not request.user.is_authenticated:
+    #     return redirect(
+    #         "bboard:login"
+    #     )  # Если пользователь не авторизован, отправляем на страницу входа
+
     return render(request, 'bboard/index.html', context)
 
 
@@ -491,20 +496,44 @@ def delete_img(request, pk):
     return redirect('bboard:index')
 
 # контроллеры метод для логирования
+# def my_login(request):
+#     user_name = request.POST['username']
+#     pass_word = request.POST['password']
+#     user = authenticate(request, username=user_name, password=pass_word)
+
+#     if user is None:
+#         login(request, user)
+#         return render(request, 'bboard/login.html',
+#                       {'user': user})
+
+#     return redirect('bboard:index')
+
+
 def my_login(request):
-    user_name = request.POST['username']
-    pass_word = request.POST['password']
-    user = authenticate(request, username=user_name, password=pass_word)
+    if request.method == "POST":
+        user_name = request.POST.get(
+            "username"
+        )  # Используем get(), чтобы избежать ошибок
+        pass_word = request.POST.get(
+            "password"
+        )  # Используем get(), чтобы избежать ошибок
 
-    if user is None:
-        login(request, user)
-        return render(request, 'bboard/login.html',
-                      {'user': user})
+        user = authenticate(request, username=user_name, password=pass_word)
 
-    return redirect('bboard:index')
+        if user is not None:
+            login(request, user)
+            return redirect("bboard:index")  # Перенаправляем на главную после входа
+        else:
+            return render(
+                request,
+                "bboard/login.html",
+                {"error": "Неверное имя пользователя или пароль"},
+            )
+    else:
+        return render(request, "bboard/login.html")  # Для GET-запроса
 
 
 # контроллеры метод для разлогирования
 def my_logout(request):
     logout(request)
-    return redirect("bboard:index")
+    return redirect("bboard:login")  # Перенаправляем на страницу входа

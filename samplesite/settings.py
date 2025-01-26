@@ -121,10 +121,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
-    {
-        "NAME": "bboard.validators.NoForbiddenCharsValidator",
-        'OPTIONS': {'forbidden_chars': (' ', ',', '.', ':', ';')}
-    },
+    # {
+    #     "NAME": "bboard.validators.NoForbiddenCharsValidator",
+    #     "OPTIONS": {"forbidden_chars": (" ", ",", ".", ":", ";")},
+    # },
+    # {
+    #     "NAME": "bboard.validators.CustomPasswordValidator",
+    # },
 ]
 
 # AUTH_USER_MODEL = 'testapp.models.AdvUser'
@@ -184,9 +187,9 @@ LOGGING = {
     },
 }
 
-# LOGIN_URL = "/accounts/login/"
-LOGIN_REDIRECT_URL = 'bboard:index'
-LOGOUT_REDIRECT_URL = 'bboard:index'
+LOGIN_URL = "/login/" # URL для входа
+LOGIN_REDIRECT_URL = "bboard:index"  # URL после выхода
+LOGOUT_REDIRECT_URL = "bboard:index"  # URL после входа
 # PASSWORD_RESET_TIMEOUT = 60 * 60 * 24 * 3  # 259_200
 
 # CAPTCHA

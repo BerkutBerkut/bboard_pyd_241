@@ -12,11 +12,17 @@ from bboard.views import  manage_icecreams, success_view
 # from bboard.views import create_icecream
 from bboard.views import icecream_list, search
 from bboard.views import user_info
-from bboard.views import return_string, return_html, return_json, show_request_parameters, log_request_data 
+from bboard.views import (return_string, return_html, return_json, 
+                          show_request_parameters, log_request_data,
+                          my_login, my_logout) 
 
 app_name = 'bboard'
 
 urlpatterns = [
+    path('', my_login, name='home'), # Перенаправление на авторизацию
+    path("login/", my_login, name="login"),  # URL для входа
+    path("logout/", my_logout, name="logout"),  # URL для выхода
+    
     # path('<int:year>/week/<int:week>/',fe
     #      WeekArchiveView.as_view(model=Bb, date_field='published',
     #                              context_object_name='bbs')),
@@ -25,38 +31,38 @@ urlpatterns = [
     #                             month_format='%m',
     #                             context_object_name='bbs')),
     path(
-        '<int:year>/<int:month>/<int:day>/',
+        "<int:year>/<int:month>/<int:day>/",
         BbRedirectView.as_view(),
-        name='old_archive',
+        name="old_archive",
     ),
-    path('rubrics/', rubrics, name='rubrics'),
-    path('bbs/<int:rubric_id>/', bbs, name='bbs'),
-    path('add/', BbCreateView.as_view(), name='add'),
-    path('edit/<int:pk>/', BbEditView.as_view(), name='edit'),
+    path("rubrics/", rubrics, name="rubrics"),
+    path("bbs/<int:rubric_id>/", bbs, name="bbs"),
+    path("add/", BbCreateView.as_view(), name="add"),
+    path("edit/<int:pk>/", BbEditView.as_view(), name="edit"),
     # path('edit/<int:pk>/', edit, name='edit'),
-    path('delete/<int:pk>/', BbDeleteView.as_view(), name='delete'),
-    path('<int:rubric_id>/', BbRubricBbsView.as_view(), name='by_rubric'),
-    path('detail/<int:pk>/', BbDetailView.as_view(), name='detail'),
+    path("delete/<int:pk>/", BbDeleteView.as_view(), name="delete"),
+    path("<int:rubric_id>/", BbRubricBbsView.as_view(), name="by_rubric"),
+    path("detail/<int:pk>/", BbDetailView.as_view(), name="detail"),
     # path("create_icecream/", create_icecream, name="create_icecreame"),
-    path('manage_icecreams/', manage_icecreams, name='manage_icecreams'),
-    path('success/', success_view, name='success'),
+    path("manage_icecreams/", manage_icecreams, name="manage_icecreams"),
+    path("success/", success_view, name="success"),
     # path('add_icecream/', add_icecream, name='add_icecream'),
-    path('icecream_list/', icecream_list, name='icecream_list'),
-    path('user_info/<int:user_id>/', user_info, name='user_info'),
-    path('search/', search, name='search'),
-    path('', index, name='index'),
+    path("icecream_list/", icecream_list, name="icecream_list"),
+    path("user_info/<int:user_id>/", user_info, name="user_info"),
+    path("search/", search, name="search"),
+    path("index", index, name="index"), # Главная страница
     # path('', BbIndexView.as_view(), name='index'),
     path(
-        'show_request_parameters/',
+        "show_request_parameters/",
         show_request_parameters,
-        name='show_request_parameters',
+        name="show_request_parameters",
     ),
     path(
-        'log_request_data/',
+        "log_request_data/",
         log_request_data,
-        name='log_request_data',
+        name="log_request_data",
     ),
-    path('return_string/', return_string, name='return_string'),
-    path('return_html/', return_html, name='return_html'),
-    path('return_json/', return_json, name='return_json'),
+    path("return_string/", return_string, name="return_string"),
+    path("return_html/", return_html, name="return_html"),
+    path("return_json/", return_json, name="return_json"),
 ]
