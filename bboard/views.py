@@ -40,7 +40,7 @@ import logging
 
 def index(request):
     bbs = Bb.objects.order_by('-published')
-    rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
+    # rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
 
     paginator = Paginator(bbs, 2)
 
@@ -51,7 +51,8 @@ def index(request):
 
     page = paginator.get_page(page_num)
 
-    context = {'bbs': page.object_list, 'rubrics': rubrics, 'page': page}
+    # context = {'bbs': page.object_list, 'rubrics': rubrics, 'page': page}
+    context = {"bbs": page.object_list, "page": page}
 
     # if not request.user.is_authenticated:
     #     return redirect(
@@ -84,12 +85,13 @@ def by_rubric(request, rubric_id):
     # bbs = Bb.objects.filter(rubric=rubric_id)
     bbs = get_list_or_404(Bb, rubric=rubric_id)
     # rubrics = Rubric.objects.all()
-    rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
+    # rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
     current_rubric = Rubric.objects.get(pk=rubric_id)
 
     # bbs = current_rubric.entries.all()
 
-    context = {'bbs': bbs, 'rubrics': rubrics, 'current_rubric': current_rubric}
+    # context = {'bbs': bbs, 'rubrics': rubrics, 'current_rubric': current_rubric}
+    context = {"bbs": bbs, "current_rubric": current_rubric}
 
     return render(request, 'bboard/by_rubric.html', context)
 
@@ -104,8 +106,8 @@ class BbRubricBbsView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['rubrics'] = Rubric.objects.annotate(
-                                            cnt=Count('bb')).filter(cnt__gt=0)
+        # context['rubrics'] = Rubric.objects.annotate(
+        #                                     cnt=Count('bb')).filter(cnt__gt=0)
         context['current_rubric'] = Rubric.objects.get(
                                                    pk=self.kwargs['rubric_id'])
         return context
@@ -141,11 +143,11 @@ class BbCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     def test_func(self):
         return self.request.user.is_staff
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['rubrics'] = Rubric.objects.annotate(
-                                            cnt=Count('bb')).filter(cnt__gt=0)
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['rubrics'] = Rubric.objects.annotate(
+    #                                         cnt=Count('bb')).filter(cnt__gt=0)
+    #     return context
 
 
 def add_and_save(request):
@@ -185,11 +187,11 @@ class BbEditView(UpdateView):
     form_class = BbForm
     success_url = reverse_lazy('bboard:index')
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['rubrics'] = Rubric.objects.annotate(
-                                            cnt=Count('bb')).filter(cnt__gt=0)
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['rubrics'] = Rubric.objects.annotate(
+    #                                         cnt=Count('bb')).filter(cnt__gt=0)
+    #     return context
 
 
 def edit(request, pk):
@@ -227,22 +229,22 @@ def bb_detail(request, bb_id):
 class BbDetailView(DetailView):
     model = Bb
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['rubrics'] = Rubric.objects.annotate(
-                                            cnt=Count('bb')).filter(cnt__gt=0)
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['rubrics'] = Rubric.objects.annotate(
+    #                                         cnt=Count('bb')).filter(cnt__gt=0)
+    #     return context
 
 
 class BbDeleteView(DeleteView):
     model = Bb
     success_url = '/{rubric_id}/'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['rubrics'] = Rubric.objects.annotate(
-                                            cnt=Count('bb')).filter(cnt__gt=0)
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['rubrics'] = Rubric.objects.annotate(
+    #                                         cnt=Count('bb')).filter(cnt__gt=0)
+    #     return context
 
 
 @login_required(login_url='/login/')
@@ -375,51 +377,51 @@ def success_view(request):
 
 # @transaction.non_atomic_requests # не атомарные запросы 'ATOMIC_REQUEST': False,
 # @transaction.atomic  # атомарные запросы 'ATOMIC_REQUEST': True
-# def my_view(request):
-#     # if formset.is_valid():
-#     #     with transaction.atomic():
-#     #         for form in formset:
-#     #             if form.cleaned_data:
-#     #                 with transaction.atomic():
-#     #                     pass
+def my_view(request):
+    # if formset.is_valid():
+    #     with transaction.atomic():
+    #         for form in formset:
+    #             if form.cleaned_data:
+    #                 with transaction.atomic():
+    #                     pass
 
-#     # try:
-#     #     with transaction.atomic():
-#     #         # сохранить данные в БД
-#     #         pass
-#     # except DatabaseError:
-#     #     # Реагируем на ошибки
-#     #     pass
+    # try:
+    #     with transaction.atomic():
+    #         # сохранить данные в БД
+    #         pass
+    # except DatabaseError:
+    #     # Реагируем на ошибки
+    #     pass
 
-#     # bbs = Bb.objects.select_for_update().filter(price__lt=100)
-#     bbs = Bb.objects.select_for_update(skip_locked=True,
-#                                        of=('self', 'rubric')).filter(price__lt=100)
-#     # with transaction.atomic():
-#     #     for bb in bbs:
-#     #         bb.price = 100
-#     #         bb.save()
+    # bbs = Bb.objects.select_for_update().filter(price__lt=100)
+    bbs = Bb.objects.select_for_update(skip_locked=True,
+                                       of=('self', 'rubric')).filter(price__lt=100)
+    # with transaction.atomic():
+    #     for bb in bbs:
+    #         bb.price = 100
+    #         bb.save()
 
-#     # if form.is_valid():
-#     #     try:
-#     #         form.save()
-#     #         transaction.commit()
-#     #     except:
-#     #         transaction.rollback()
+    # if form.is_valid():
+    #     try:
+    #         form.save()
+    #         transaction.commit()
+    #     except:
+    #         transaction.rollback()
 
-#     # if formset.is_valid():
-#     #     for form in formset:
-#     #         if form.cleaned_data:
-#     #             sp = transaction.savepoint()
-#     #             try:
-#     #                 form.save()
-#     #                 transaction.savepoint_commit(sp)
-#     #             except:
-#     #                 transaction.savepoint_rollback(sp)
-#     #             transaction.commit()
+    # if formset.is_valid():
+    #     for form in formset:
+    #         if form.cleaned_data:
+    #             sp = transaction.savepoint()
+    #             try:
+    #                 form.save()
+    #                 transaction.savepoint_commit(sp)
+    #             except:
+    #                 transaction.savepoint_rollback(sp)
+    #             transaction.commit()
 
-#     #             transaction.on_commit(commit_handler)
+    #             transaction.on_commit(commit_handler)
 
-#     return redirect('bboard:index')
+    return redirect('bboard:index')
 
 # Форма не связанная с моделью
 def search(request):
