@@ -9682,3 +9682,116 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'user_info' with arguments '(
 Not Found: /user_info/5/
 Not Found: /detail/19/...
 Not Found: /detail/1/...
+Not Found: /favicon.ico
+Not Found: /todo/todolist/create/
+Not Found: /todolist/create/
+Not Found: /todolist/create/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Not Found: /todolist/todo_list/
+Not Found: /todolist/todo_detail/
+Method Not Allowed: /todolist/todo_create/
+Method Not Allowed: /todolist/todo_create/
+Not Found: /todolist/todo_update/
+Not Found: /todolist/todo_list/
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/3/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Not Found: /todolist/todo_list/1/
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Internal Server Error: /todolist/todo_detail/1/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: View.as_view() takes 1 positional argument but 2 were given
+Not Found: /todolist/todo_list/1/

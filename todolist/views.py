@@ -1,59 +1,139 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from todolist.forms import SimpleForm, ImgForm, DocForm
+
+from django.urls import reverse_lazy
 
 import json
 
 from todolist.models import Todo, Img, Doc
 
+# # Получение всех задач
+# def todo_list(request):
+#     tasks = Todo.objects.all().values("id", "title", "description", "completed", "created_at", "updated_at")
+#     return JsonResponse(list(tasks), safe=False)
+
+
 # Получение всех задач
-def todo_list(request):
-    tasks = Todo.objects.all().values("id", "title", "description", "completed", "created_at", "updated_at")
-    return JsonResponse(list(tasks), safe=False)
+class TodoListView(ListView):
+    model = Todo
+    context_object_name = "tasks"
+
+    def render_to_response(self, context, **response_kwargs):
+        tasks = list(
+            context["tasks"].values(
+                "id", "title", "description", "completed", "created_at", "updated_at"
+            )
+        )
+        return JsonResponse(tasks, safe=False, **response_kwargs)
+
+
+# # Получение одной задачи
+# def todo_detail(request, todo_id):
+#     task = get_object_or_404(Todo, id=todo_id)
+#     return JsonResponse({
+#         "id": task.id,
+#         "title": task.title,
+#         "description": task.description,
+#         "completed": task.completed,
+#         "created_at": task.created_at,
+#         "updated_at": task.updated_at,
+#     })
+#     # return render(request, 'todo_detail.html')
+
 
 # Получение одной задачи
-def todo_detail(request, todo_id):
-    task = get_object_or_404(Todo, id=todo_id)
-    return JsonResponse({
-        "id": task.id,
-        "title": task.title,
-        "description": task.description,
-        "completed": task.completed,
-        "created_at": task.created_at,
-        "updated_at": task.updated_at,
-    })
-    # return render(request, 'todo_detail.html')
+class TodoDetailView(DetailView):
+    model = Todo
+    context_object_name = "task"
+
+    def render_to_response(self, context, **response_kwargs):
+        task = context["object"]
+        return JsonResponse(
+            {
+                "id": task.id,
+                "title": task.title,
+                "description": task.description,
+                "completed": task.completed,
+                "created_at": task.created_at,
+                "updated_at": task.updated_at,
+            },
+            **response_kwargs
+        )
+
+
+# # Создание задачи
+# @csrf_exempt
+# def todo_create(request):
+#     if request.method == "POST":
+#         data = json.loads(request.body)
+#         task = Todo.objects.create(
+#             title=data.get("title"),
+#             description=data.get("description", ""),
+#             completed=data.get("completed", False),
+#         )
+#         return JsonResponse({
+#             "id": task.id,
+#             "title": task.title,
+#             "description": task.description,
+#             "completed": task.completed,
+#             "created_at": task.created_at,
+#             "updated_at": task.updated_at,
+#         }, status=201)
+#     return HttpResponse(status=405)
+#     # return render(request, 'todo_create.html')
+
 
 # Создание задачи
-@csrf_exempt
-def todo_create(request):
-    if request.method == "POST":
+@method_decorator(csrf_exempt, name="dispatch")
+class TodoCreateView(CreateView):
+    model = Todo
+    fields = ["title", "description", "completed"]
+
+    def post(self, request, *args, **kwargs):
         data = json.loads(request.body)
         task = Todo.objects.create(
             title=data.get("title"),
             description=data.get("description", ""),
             completed=data.get("completed", False),
         )
-        return JsonResponse({
-            "id": task.id,
-            "title": task.title,
-            "description": task.description,
-            "completed": task.completed,
-            "created_at": task.created_at,
-            "updated_at": task.updated_at,
-        }, status=201)
-    return HttpResponse(status=405) 
-    # return render(request, 'todo_create.html')
+        return JsonResponse(
+            {
+                "id": task.id,
+                "title": task.title,
+                "description": task.description,
+                "completed": task.completed,
+                "created_at": task.created_at,
+                "updated_at": task.updated_at,
+            },
+            status=201,
+        )
+
+
+# # Удаление задачи
+# @csrf_exempt
+# def todo_delete(request, todo_id):
+#     if request.method == "DELETE":
+#         task = get_object_or_404(Todo, id=todo_id)
+#         task.delete()
+#         return JsonResponse({"message": "Task deleted successfuly!"}, status=200)
+#     return HttpResponse(status=405)
+
 
 # Удаление задачи
-@csrf_exempt
-def todo_delete(request, todo_id):
-    if request.method == "DELETE":
-        task = get_object_or_404(Todo, id=todo_id)
+@method_decorator(csrf_exempt, name="dispatch")
+class TodoDeleteView(DeleteView):
+    model = Todo
+    success_url = reverse_lazy("todo_list")
+
+    def delete(self, request, *args, **kwargs):
+        task = get_object_or_404(Todo, id=kwargs["pk"])
         task.delete()
-        return JsonResponse({"message": "Task deleted successfuly!"}, status=200)
-    return HttpResponse(status=405)
+        return JsonResponse({"message": "Task deleted successfully!"}, status=200)
+
 
 def todo_update(request, todo_id):
     pass
