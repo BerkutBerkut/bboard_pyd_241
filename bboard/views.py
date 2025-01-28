@@ -539,3 +539,7 @@ def my_login(request):
 def my_logout(request):
     logout(request)
     return redirect("bboard:login")  # Перенаправляем на страницу входа
+
+# Контроллер для контекстного обработчика
+def all_users_group_view(request):
+    return render(request, "bboard/context_user_groups.html")

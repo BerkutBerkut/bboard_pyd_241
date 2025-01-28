@@ -1,4 +1,5 @@
 from django.db.models import Count
+from django.contrib.auth.models import User, Group
 
 from bboard.models import Rubric
 
@@ -39,7 +40,17 @@ class RubbricMiddleware:
         return response
 
 
-# Обработчики контескта 'context_processors'
+# Обработчики контекста 'context_processors'
 def rubrics(request):
     # return {'rubrics': Rubric.objects.all()}
     return {"rubrics": Rubric.objects.annotate(cnt=Count("bb")).filter(cnt__gt=0)}
+
+
+# Обработчик контекста обо всех пользователях
+# def all_users(request):
+#     return {'all_users': User.objects.all()}
+
+# Обработчик контекста о пользователях и группах текущего пользователя
+def all_users_group(request):
+    user_groups = Group.objects.filter(user=request.user) if request.user.is_authenticated else []
+    return {'all_users': User.objects.all(), 'user_groups': user_groups}

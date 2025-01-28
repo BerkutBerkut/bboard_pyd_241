@@ -4,8 +4,10 @@
         <a href="{% url 'bboard:index' %}">Главная</a>
         <a href="{% url 'bboard:add' %}">Добавить</a>
         <a href="{% url 'bboard:rubrics' %}">Рубрики</a>
-        <a href="{% url 'todolist:upload_img' %}">Добавить картинку в задачи</a>
-        <a href="{% url 'todolist:upload_doc' %}">Добавить файл в задачи</a>
+        <a href="{% url 'bboard:user_info' user.id %}">Информация о пользователе</a>
+        <a href="{% url 'bboard:context_user_groups' %}">Тест контекстного обработчика</a>
+        <!-- <a href="{% url 'todolist:upload_img' %}">Добавить картинку в задачи</a> -->
+        <!-- <a href="{% url 'todolist:upload_doc' %}">Добавить файл в задачи</a> -->
 
         <form action="{% url 'bboard:logout' %}" method="post" style="display: inline;">
             {% csrf_token %}

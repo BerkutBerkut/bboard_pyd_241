@@ -80,6 +80,9 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 'bboard.middleware.rubrics',
+
+                # 'bboard.middleware.all_users',
+                'bboard.middleware.all_users_group'
             ],
         },
     },

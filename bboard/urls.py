@@ -12,9 +12,17 @@ from bboard.views import  manage_icecreams, success_view
 # from bboard.views import create_icecream
 from bboard.views import icecream_list, search
 from bboard.views import user_info
-from bboard.views import (return_string, return_html, return_json, 
-                          show_request_parameters, log_request_data,
-                          my_login, my_logout) 
+from bboard.views import (
+    return_string,
+    return_html,
+    return_json,
+    show_request_parameters,
+    log_request_data,
+    my_login,
+    my_logout,
+    all_users_group_view,
+)
+
 
 app_name = 'bboard'
 
@@ -65,4 +73,6 @@ urlpatterns = [
     path("return_string/", return_string, name="return_string"),
     path("return_html/", return_html, name="return_html"),
     path("return_json/", return_json, name="return_json"),
+
+    path('context_user_groups/', all_users_group_view, name='context_user_groups'),
 ]
