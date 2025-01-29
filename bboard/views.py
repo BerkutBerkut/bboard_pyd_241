@@ -3,6 +3,9 @@ from django.contrib.auth import get_user, authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, user_passes_test, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+
+from django.contrib import messages
+
 from django.core.paginator import Paginator
 from django.db import transaction, DatabaseError
 from django.db.models import Count
@@ -39,6 +42,7 @@ import logging
 
 
 def index(request):
+
     bbs = Bb.objects.order_by('-published')
     # rubrics = Rubric.objects.annotate(cnt=Count('bb')).filter(cnt__gt=0)
 
@@ -52,14 +56,38 @@ def index(request):
     page = paginator.get_page(page_num)
 
     # context = {'bbs': page.object_list, 'rubrics': rubrics, 'page': page}
-    context = {"bbs": page.object_list, "page": page}
+
+
+    # Учет через счетчик
+    # if "counter" in request.COOKIES:
+    #     cnt = int(request.COOKIES["counter"]) + 1
+    # else:
+    #     cnt = 1
+
+    # context = {"bbs": page.object_list, "page": page, 'counter':cnt}
+
+    # response = render(request, 'bboard/index.html', context)
+    # response.set_cookie('counter', cnt)
+    # return response
+
+    # Учет через сессию
+    if "counter" in request.session:
+        cnt = request.session["counter"] + 1
+    else:
+        cnt = 1
+
+    request.session['counter'] = cnt
+
+    context = {"bbs": page.object_list, "page": page, 'counter':cnt}
+
+    return render(request, 'bboard/index.html', context)
 
     # if not request.user.is_authenticated:
     #     return redirect(
     #         "bboard:login"
     #     )  # Если пользователь не авторизован, отправляем на страницу входа
 
-    return render(request, 'bboard/index.html', context)
+    # return render(request, 'bboard/index.html', context)
 
 
 class BbIndexView(ArchiveIndexView):
@@ -186,6 +214,7 @@ class BbEditView(UpdateView):
     model = Bb
     form_class = BbForm
     success_url = reverse_lazy('bboard:index')
+    success_message = 'Объявление успешно исправлено!'
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
@@ -432,6 +461,12 @@ def search(request):
             rubric_id = sf.cleaned_data['rubric'].pk
             # bbs = Bb.objects.filter(title__icontains=keyword, rubric=rubric_id)
             bbs = Bb.objects.filter(title__iregex=keyword, rubric=rubric_id)
+
+            messages.add_message(request, messages.SUCCESS,
+                                 'Слово найдено!', extra_tags='first second')
+
+            # messages.success(request, "Слово найдено!")
+
             context = {'bbs': bbs, 'form': require_safe}
             return render(request, 'bboard/search_results.html', context)
 

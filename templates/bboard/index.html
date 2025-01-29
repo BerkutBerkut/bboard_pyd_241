@@ -3,7 +3,7 @@
 {% load django_bootstrap5 %}
 
 {% block content %}
-
+    <p>Counter: {{ counter }}</p>
     {#    {{ block.super }} #}
 
     {% with bb_count=bbs.count %}

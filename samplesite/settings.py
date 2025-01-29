@@ -14,6 +14,7 @@ from pathlib import Path
 
 from captcha.conf.settings import CAPTCHA_TIMEOUT, CAPTCHA_LENGTH
 from django.conf.global_settings import STATICFILES_DIRS, ABSOLUTE_URL_OVERRIDES, MEDIA_URL, AUTH_USER_MODEL
+from django.contrib import messages
 from django_bootstrap5.core import BOOTSTRAP5
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -264,3 +265,26 @@ THUMBNAIL_SUBDIR = 'thumbs'
 # THUMBNAIL_EXTENSION = 'jpg'
 # THUMBNAIL_TRANSPARENCY_EXTENSION = 'png'
 THUMBNAIL_PRESERVE_EXTENSION = ('png',)
+
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db' # по умолчанию 
+# SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+# SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+
+# MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+# MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+# MESSAGE_STORAGE = "django.contrib.messages.storage.fallback.FallbackStorage"
+
+
+# MESSAGE_LEVEL = 20
+# MESSAGE_LEVEL = messages.DEBUG
+
+# CRITICAL = 50
+# MESSAGE_TAGS = {
+#     CRITICAL: 'critical'
+# } 

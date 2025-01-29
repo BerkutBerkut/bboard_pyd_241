@@ -10,5 +10,14 @@ class SMSListView(ListView):
     context_object_name = 'sms_list'
     ordering = ['-timestamp']
 
+def test_cookie(request):
+    if request.method == 'POST':
+        if request.session.test_cookie_worked():
+            request.session.delete_test_cookie()
+            print('КУКИ НЕ РАБОТАЮТ')
+    request.session.set_test_cookie()
+    print('TEST_COOKIE', request.session.test_cookie_worked())
+    return render(request, 'testapp/test_cookie.html')
+
     
 
