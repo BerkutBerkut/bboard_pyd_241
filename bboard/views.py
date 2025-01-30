@@ -322,6 +322,7 @@ def bbs(request, rubric_id):
     return render(request, 'bboard/bbs.html', context)
 
 
+
 @login_required
 def user_info(request, user_id):
     user = get_object_or_404(User, id=user_id)
@@ -330,6 +331,8 @@ def user_info(request, user_id):
     print(f"Является ли суперпользователем: {user.is_superuser}")
     print(f"Группы пользователя: {[group.name for group in user.groups.all()]}")
     return render(request, 'bboard/user_info.html', {'user': user})
+
+
 
 def commit_handler():
     pass
@@ -546,6 +549,7 @@ def delete_img(request, pk):
 #     return redirect('bboard:index')
 
 
+# контроллер метод для логирования
 def my_login(request):
     if request.method == "POST":
         user_name = request.POST.get(
