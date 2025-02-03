@@ -1,11 +1,16 @@
+from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.urls import reverse
 from django.shortcuts import render, get_list_or_404, redirect
+from django.core.mail import (EmailMessage, get_connection, 
+                                EmailMultiAlternatives, 
+                                send_mail, send_mass_mail, mail_managers)
+
 from django.views.generic import ListView, DetailView, View
 from django.views.generic.edit import FormView
 from testapp.forms import UserSearchForm
 
-from django.contrib.auth.models import User
+from django.template.loader import render_to_string
 
 from testapp.models import SMS
 
@@ -24,6 +29,87 @@ def test_cookie(request):
     request.session.set_test_cookie()
     print('TEST_COOKIE', request.session.test_cookie_worked())
     return render(request, 'testapp/test_cookie.html')
+
+
+def test_email(request):
+
+    ##### Низкоуровневые #####
+    # em = EmailMessage(subject='Тест', body='Тест',
+    #                   to=['yser@supersite.kz'])
+    # em.send()
+
+    # em = EmailMessage(
+    #     subject="Ваш новый пароль.",
+    #     body="Ваш новый пароль находится во вложений.",
+    #     attachments=[('password.txt', '123456789', 'text/plain')],
+    #     to=["user@supersite.kz"],
+    # )
+    # em.send()
+
+    # em = EmailMessage(
+    #     subject="Запрошенный Вами файл",
+    #     body="Получите запрошенный Вами файл.",
+    #     to=["user@supersite.kz"],
+    # )
+    # em.attach_file(r'C:\work\file.txt')
+    # em.send()
+
+    ### на основе шаблонов ###
+    # context = {'user': 'Вася Пупкин'}
+    # s = render_to_string('email/letter.txt', context)
+    # em = EmailMessage(subject='Оповещение', body=s,
+    #                   to=['vpupkin@othersite.kz'])
+    # em.send()
+
+    ### соединения, массовая рассылка ###
+    # con = get_connection()
+    # con.open()
+    # email1 = EmailMessage(
+    #     subject="Запрошенный Вами файл",
+    #     body="Получите запрошенный Вами файл.",
+    #     to=["user@supersite.kz"],
+    #     connection=con)
+    # email2 = EmailMessage(
+    #     subject="Запрошенный Вами файл",
+    #     body="Получите запрошенный Вами файл.",
+    #     to=["user@supersite.kz"],
+    #     connection=con)
+    # email3 = EmailMessage(
+    #     subject="Запрошенный Вами файл",
+    #     body="Получите запрошенный Вами файл.",
+    #     to=["user@supersite.kz"],
+    #     connection=con)
+    # con.send_messages([email1, email2, email3])
+    # con.close()
+
+    ### составное письмо ###
+    # em = EmailMultiAlternatives(subject='Тест', body='Тест',
+    #                             to=['user@supersite.kz'])
+    # em.attach_alternative('<h1>Тест</h1>', 'text/html')
+    # em.send()
+
+    ##### Высокоуровневые #####
+    # send_mail('Test email', 'Test!!!', 'webmaster@supersite.kz',
+    #           ['user@othersite.kz'], html_message='<h1>Test!!!</h1>')
+
+    # msg1 = ('Подписка', 'Подвердите пожалуйста подписку',
+    #         'subscribe@supersite.kz',
+    #         ['user@otheruser.kz', 'megauser@megasite.kz']
+    #         )
+    # msg2 = ("Подписка", "Ваша подписка подтверждена",
+    #         "subscribe@supersite.kz",
+    #         ["user@otheruser.kz", "otheruser@megasite.kz"],
+    #         )
+    # send_mass_mail((msg1, msg2))
+
+    # user = User.objects.get(username='admin')
+    # user.email_user("Подъём!", "Admin, не спи!", fail_silently=True)
+
+    # mail_managers("Подъём!", "Редакторы, не спите!",
+    #               html_message='<strong>Редакторы, не спите!</strong>')
+
+    return render(request, "testapp/test_email.html")
+
 
 # Выводим данные первого пользователя
 class FirstUserView(View):
