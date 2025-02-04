@@ -2,8 +2,8 @@ from django.urls import path
 # from django.urls import re_path
 from django.shortcuts import render, redirect, get_object_or_404
 
-# from todolist.views import (todo_list, todo_detail, todo_create, 
-#                             todo_update, todo_delete) 
+# from todolist.views import (todo_list, todo_detail, todo_create,
+#                             todo_update, todo_delete)
 from todolist.views import (
     todo_archived,
     todo_search,
@@ -17,11 +17,13 @@ from todolist.views import (
     delete_img,
     delete_doc,
 )
-from todolist.views import TodoListView, TodoDetailView, TodoCreateView, TodoDeleteView
+from todolist.views import (IndexView, TodoListView, TodoDetailView, 
+                            TodoCreateView, TodoDeleteView, TodoUpdateView)
 
 app_name = 'todolist'
 
 urlpatterns = [
+    path("", IndexView.as_view(), name="todo_index"),
     # path("", todo_list, name="todo_list"),
     path("todo_list/", TodoListView.as_view(), name="todo_list"),
     # re_path(r"^$", todo_list, name="todo_list"),
@@ -31,7 +33,7 @@ urlpatterns = [
     # path("todo_create/", todo_create, name="todo_create"),
     path("todo_create/", TodoCreateView.as_view(), name="todo_create"),
     # re_path(r"^create/$", todo_create, name="todo_create"),
-    # path("todo_update/<int:todo_id>/", todo_update, name="todo_update"),
+    path("todo_update/<int:pk>/", TodoUpdateView.as_view(), name="todo_update"),
     # re_path(r"^update/(?P<todo_id>\d+)/$", todo_update, name="todo_update"),
     # path("todo_delete/<int:todo_id>/", todo_delete, name="todo_delete"),
     path("todo_delete/<int:pk>/", TodoDeleteView.as_view(), name="todo_delete"),

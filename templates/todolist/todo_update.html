@@ -1,0 +1,18 @@
+{% extends 'todolist/todo_base.html' %}
+
+{% block title %}Редактировать задачу{% endblock %}
+
+{% block content %}
+    <h2>Редактировать задачу</h2>
+    
+    {% for task in tasks %}
+    <a href="{% url 'todo_update' task.id %}">Обновить задачу</a>
+    {% endfor %}
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+    <a href="{% url 'todolist:todo_list' %}">Вернуться к списку</a>
+{% endblock %}

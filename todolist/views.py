@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from django.views.generic import ListView, DetailView, CreateView, DeleteView
+from django.views.generic import (ListView, DetailView, CreateView, 
+                                  DeleteView, TemplateView, UpdateView)
 from todolist.forms import SimpleForm, ImgForm, DocForm
 
 from django.urls import reverse_lazy
@@ -10,6 +11,9 @@ from django.urls import reverse_lazy
 import json
 
 from todolist.models import Todo, Img, Doc
+
+class IndexView(TemplateView):
+    template_name = 'todolist/todo_index.html'
 
 # # Получение всех задач
 # def todo_list(request):
@@ -20,15 +24,16 @@ from todolist.models import Todo, Img, Doc
 # Получение всех задач
 class TodoListView(ListView):
     model = Todo
+    template_name = 'todolist/todo_list.html'
     context_object_name = "tasks"
 
-    def render_to_response(self, context, **response_kwargs):
-        tasks = list(
-            context["tasks"].values(
-                "id", "title", "description", "completed", "created_at", "updated_at"
-            )
-        )
-        return JsonResponse(tasks, safe=False, **response_kwargs)
+    # def render_to_response(self, context, **response_kwargs):
+    #     tasks = list(
+    #         context["tasks"].values(
+    #             "id", "title", "description", "completed", "created_at", "updated_at"
+    #         )
+    #     )
+    #     return JsonResponse(tasks, safe=False, **response_kwargs)
 
 
 # # Получение одной задачи
@@ -48,21 +53,22 @@ class TodoListView(ListView):
 # Получение одной задачи
 class TodoDetailView(DetailView):
     model = Todo
+    template_name = "todolist/todo_detail.html"
     context_object_name = "task"
 
-    def render_to_response(self, context, **response_kwargs):
-        task = context["object"]
-        return JsonResponse(
-            {
-                "id": task.id,
-                "title": task.title,
-                "description": task.description,
-                "completed": task.completed,
-                "created_at": task.created_at,
-                "updated_at": task.updated_at,
-            },
-            **response_kwargs
-        )
+    # def render_to_response(self, context, **response_kwargs):
+    #     task = context["object"]
+    #     return JsonResponse(
+    #         {
+    #             "id": task.id,
+    #             "title": task.title,
+    #             "description": task.description,
+    #             "completed": task.completed,
+    #             "created_at": task.created_at,
+    #             "updated_at": task.updated_at,
+    #         },
+    #         **response_kwargs
+    #     )
 
 
 # # Создание задачи
@@ -88,29 +94,31 @@ class TodoDetailView(DetailView):
 
 
 # Создание задачи
-@method_decorator(csrf_exempt, name="dispatch")
+# @method_decorator(csrf_exempt, name="dispatch")
 class TodoCreateView(CreateView):
     model = Todo
     fields = ["title", "description", "completed"]
+    template_name = "todolist/todo_create.html"
+    success_url = reverse_lazy("todolist:todo_list")
 
-    def post(self, request, *args, **kwargs):
-        data = json.loads(request.body)
-        task = Todo.objects.create(
-            title=data.get("title"),
-            description=data.get("description", ""),
-            completed=data.get("completed", False),
-        )
-        return JsonResponse(
-            {
-                "id": task.id,
-                "title": task.title,
-                "description": task.description,
-                "completed": task.completed,
-                "created_at": task.created_at,
-                "updated_at": task.updated_at,
-            },
-            status=201,
-        )
+    # def post(self, request, *args, **kwargs):
+    #     data = json.loads(request.body)
+    #     task = Todo.objects.create(
+    #         title=data.get("title"),
+    #         description=data.get("description", ""),
+    #         completed=data.get("completed", False),
+    #     )
+    #     return JsonResponse(
+    #         {
+    #             "id": task.id,
+    #             "title": task.title,
+    #             "description": task.description,
+    #             "completed": task.completed,
+    #             "created_at": task.created_at,
+    #             "updated_at": task.updated_at,
+    #         },
+    #         status=201,
+    #     )
 
 
 # # Удаление задачи
@@ -124,19 +132,25 @@ class TodoCreateView(CreateView):
 
 
 # Удаление задачи
-@method_decorator(csrf_exempt, name="dispatch")
+# @method_decorator(csrf_exempt, name="dispatch")
 class TodoDeleteView(DeleteView):
     model = Todo
-    success_url = reverse_lazy("todo_list")
+    template_name = "todolist/todo_delete.html"
+    success_url = reverse_lazy("todolist:todo_list")
+    context_object_name = 'task' 
 
-    def delete(self, request, *args, **kwargs):
-        task = get_object_or_404(Todo, id=kwargs["pk"])
-        task.delete()
-        return JsonResponse({"message": "Task deleted successfully!"}, status=200)
+    # def delete(self, request, *args, **kwargs):
+    #     task = get_object_or_404(Todo, id=kwargs["pk"])
+    #     task.delete()
+    #     return JsonResponse({"message": "Task deleted successfully!"}, status=200)
 
 
-def todo_update(request, todo_id):
-    pass
+class TodoUpdateView(UpdateView):
+    model = Todo
+    fields = ["title", "description", "completed"]
+    template_name = "todolist/todo_update.html"
+    success_url = reverse_lazy("todolist:todo_list")
+
 
 def todo_archived(request, todo_id):
     pass
