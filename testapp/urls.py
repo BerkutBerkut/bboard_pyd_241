@@ -1,7 +1,8 @@
 from django.urls import path
 from testapp.views import (SMSListView, test_cookie, test_email, 
                            FirstUserView, AllUsersView,
-                           UserDetailView, UserSearchView)
+                           UserDetailView, UserSearchView, 
+                           test_filters_tags)
 
 
 app_name = 'testapp'
@@ -14,4 +15,5 @@ urlpatterns = [
     path("users/", AllUsersView.as_view(), name="all_users"),
     path("users/<int:pk>/", UserDetailView.as_view(), name="user_detail"),
     path("user_search/", UserSearchView.as_view(), name="user_search"),
+    path("test_filters_tags/", test_filters_tags, name="test_filters_tags")
 ]

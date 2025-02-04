@@ -9,7 +9,7 @@ from django.core.mail import (EmailMessage, get_connection,
 from django.views.generic import ListView, DetailView, View
 from django.views.generic.edit import FormView
 from testapp.forms import UserSearchForm
-
+from django.utils.timezone import now
 from django.template.loader import render_to_string
 
 from testapp.models import SMS
@@ -159,3 +159,15 @@ class UserSearchView(FormView):
     def form_valid(self, form):
         user_id = form.cleaned_data["user_id"]
         return redirect(reverse("testapp:user_detail", kwargs={"pk": user_id}))
+
+
+def test_filters_tags(request):
+    data = {
+        "username": "test_viewer",
+        "balance": 12345.6789,
+        "date_joined": now(),
+        "text": " Текст для тестирования фильтров и тегов!",
+        "items": ["овощи", "фрукты", "ягоды"]
+    }
+
+    return render(request, "testapp/test_filters_tags.html", data)
