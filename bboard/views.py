@@ -29,6 +29,8 @@ from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteVi
 from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
 from bboard.models import Bb, Rubric, Icecream, Img
 from bboard.signals import add_bb
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_headers, vary_on_cookie
 
 import logging
 
@@ -42,6 +44,12 @@ import logging
 #     return render(request, 'bboard/index.html', context)
 
 
+# @cache_page(60 * 5)
+# @cache_page(30)
+# @vary_on_headers("User-Agent")
+# @vary_on_headers("Cookie")
+# @vary_on_headers("User-Agent", "Cookie")
+# @vary_on_cookie
 def index(request):
 
     bbs = Bb.objects.order_by('-published')
@@ -328,7 +336,6 @@ def bbs(request, rubric_id):
     return render(request, 'bboard/bbs.html', context)
 
 
-
 @login_required
 def user_info(request, user_id):
     user = get_object_or_404(User, id=user_id)
@@ -337,7 +344,6 @@ def user_info(request, user_id):
     print(f"Является ли суперпользователем: {user.is_superuser}")
     print(f"Группы пользователя: {[group.name for group in user.groups.all()]}")
     return render(request, 'bboard/user_info.html', {'user': user})
-
 
 
 def commit_handler():

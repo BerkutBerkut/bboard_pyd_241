@@ -22,15 +22,15 @@ from bboard.views import (
     my_logout,
     all_users_group_view,
 )
+from django.views.decorators.cache import cache_page
 
 
 app_name = 'bboard'
 
 urlpatterns = [
-    path('', my_login, name='home'), # Перенаправление на авторизацию
+    path("", my_login, name="home"),  # Перенаправление на авторизацию
     path("login/", my_login, name="login"),  # URL для входа
     path("logout/", my_logout, name="logout"),  # URL для выхода
-    
     # path('<int:year>/week/<int:week>/',fe
     #      WeekArchiveView.as_view(model=Bb, date_field='published',
     #                              context_object_name='bbs')),
@@ -49,7 +49,13 @@ urlpatterns = [
     path("edit/<int:pk>/", BbEditView.as_view(), name="edit"),
     # path('edit/<int:pk>/', edit, name='edit'),
     path("delete/<int:pk>/", BbDeleteView.as_view(), name="delete"),
-    path("<int:rubric_id>/", BbRubricBbsView.as_view(), name="by_rubric"),
+
+    path("<int:rubric_id>/",
+        BbRubricBbsView.as_view(),
+        # cache_page(60 * 5)(BbRubricBbsView.as_view()),
+        # cache_page(30)(BbRubricBbsView.as_view()),
+        name="by_rubric"),
+
     path("detail/<int:pk>/", BbDetailView.as_view(), name="detail"),
     # path("create_icecream/", create_icecream, name="create_icecreame"),
     path("manage_icecreams/", manage_icecreams, name="manage_icecreams"),
@@ -58,7 +64,7 @@ urlpatterns = [
     path("icecream_list/", icecream_list, name="icecream_list"),
     path("user_info/<int:user_id>/", user_info, name="user_info"),
     path("search/", search, name="search"),
-    path("index", index, name="index"), # Главная страница
+    path("index", index, name="index"),  # Главная страница
     # path('', BbIndexView.as_view(), name='index'),
     path(
         "show_request_parameters/",
@@ -73,6 +79,5 @@ urlpatterns = [
     path("return_string/", return_string, name="return_string"),
     path("return_html/", return_html, name="return_html"),
     path("return_json/", return_json, name="return_json"),
-
-    path('context_user_groups/', all_users_group_view, name='context_user_groups'),
+    path("context_user_groups/", all_users_group_view, name="context_user_groups"),
 ]

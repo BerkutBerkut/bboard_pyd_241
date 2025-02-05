@@ -1,4 +1,4 @@
-{% extends 'todolist/todo_base.html' %}
+{% extends 'todolist/includes/todo_base.html' %}
 {% load thumbnail %}
 
 {% block title %}Загруженные файлы{% endblock %}
@@ -6,17 +6,27 @@
 {% block content %}
 <div class="container mt-5">
     <h2>Список файлов</h2>
-    <ul>
-        {% for img in img_objects %}
-            <li>
-                <img src="{{ img.img.url }}" alt="Image" style="max-width: 200px;"><br>
+    <!-- <ul> -->
+        <!-- {% for img in img_objects %} -->
+            <!-- <li> -->
+                <!-- <img src="{{ img.img.url }}" alt="Image" style="max-width: 200px;"><br> -->
                 <!-- <img src="{% thumbnail img.img 'default' bw=True %}" alt="Image" style="max-width: 200px;"><br> -->
                 <!-- <img src="{% thumbnail img.img '300x200' crop='smart' %}" alt="Image" style="max-width: 200px;"><br> -->
                 <!-- <img src="{% thumbnail img.img 'default' %}" alt="Image" style="max-width: 200px;"><br> -->
-                {{ img.img.name }}<br>
-                <a href="{% url 'todolist:delete_img' img.pk %}" class="btn btn-danger">Удалить</a>
-            </li>
+                <!-- {{ img.img.name }}<br> -->
+                <!-- <a href="{% url 'todolist:delete_img' img.pk %}" class="btn btn-danger">Удалить</a> -->
+            <!-- </li> -->
+        <!-- {% endfor %} -->
+    <!-- </ul> -->
+
+    <ul>
+        {% for img in page_obj %}
+        <li><img src="{{ img.image.url }}" alt="{{ img.title }}"></li>
         {% endfor %}
     </ul>
+
+    <a href="{% url 'todolist:upload_img' %}">Добавить изображение</a>
+
+    {% include 'todolist/pagination.html' %}
 </div>
 {% endblock %}

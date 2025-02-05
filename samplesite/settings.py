@@ -54,10 +54,15 @@ INSTALLED_APPS = [
     "django_cleanup",  # всегда в самом низу!!!
 ]
 
+# в MIDDLEWARE расположение строк очень важно
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    
+    # "django.middleware.cache.UpdateCacheMiddleware",  # для кэша
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    # "django.middleware.cache.FetchFromCacheMiddleware",  # для кэша
+
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -324,3 +329,38 @@ EMAIL_USE_LOCALTIME = True
 #     ("manager2", "manager2@supersite.kz"),
 #     ("manager3", "manager3@supersite.kz"),
 # ]
+
+
+##################
+###### Cashe #####
+##################
+
+CACHES = {
+    # "default": {
+    #     # "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+    #     # "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
+    #     "BACKEND": "django.core.cache.backends.locmem.locMemCache",
+    #     # "BACKEND": "django.core.cache.backends.memcache.MemcachedCache",
+    #     # "BACKEND": "django.core.cache.backends.dummy.DammyCache",
+    #     "LOCATION": "cache1",
+    # },
+    # "special": {
+    #     "BACKEND": "django.core.cache.backends.locmem.locMemCache",
+    #     "LOCATION": "cache2",
+    # },
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "cache_table",
+        "TIMEOUT": 120,  # ПО УМОЛЧАНИЮ ЗНАЧЕНИЕ 300 сек (время хранения кэша)
+        "OPTIONS": {
+            "MAX_ENTRIES": 200,
+        },
+    },
+    "redis": {
+        "BACKEND": "django_radis.cache.RedisCache",
+        "LOCATION": "redis://localhost:6379/0",
+    },
+}
+
+# CACHE_MIDDLEWARE_ALIAS = "default"
+# CACHE_MIDDLEWARE_SECONDS = 10

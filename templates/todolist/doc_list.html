@@ -1,4 +1,4 @@
-{% extends 'todolist/todo_base.html' %}
+{% extends 'todolist/includes/todo_base.html' %}
 
 
 {% block title %}Загруженные файлы{% endblock %}
@@ -14,5 +14,6 @@
         </li>
         {% endfor %}
     </ul>
+    <a href="{% url 'todolist:upload_doc' %}">Добавить докуменнт</a>
 </div>
 {% endblock %}

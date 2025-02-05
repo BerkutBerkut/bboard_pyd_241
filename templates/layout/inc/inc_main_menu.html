@@ -1,3 +1,9 @@
+{% load cache %}
+
+
+{#{% cache 300 navbar %}#}
+{#{% cache 30 navbar request.user.is_authenticated %}#}
+{% cache 30 navbar request.user.is_authenticated request.user.username %}
 <nav>
     
     {% if user.is_authenticated %}
@@ -20,3 +26,5 @@
                 ({{ rubric.cnt }})</a>
         {% endfor %}
 </nav>
+
+{% endcache %}
