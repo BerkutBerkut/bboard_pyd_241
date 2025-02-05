@@ -1,5 +1,6 @@
 {% extends 'todolist/includes/todo_base.html' %}
 
+{% load django_bootstrap5 %}
 
 {% block title %}Загруженные файлы{% endblock %}
 
@@ -7,13 +8,15 @@
 <div class="container mt-5">
     <h2>Список документов</h2>
     <ul>
-        {% for doc in doc_objects %}
+        {% for doc in page %}
         <li>
             <a href="{{ doc.file.url }}" target="_blank">{{ doc.file.name }}</a><br>
             <a href="{% url 'todolist:delete_doc' doc.pk %}" class="btn btn-danger">Удалить</a>
         </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'todolist:upload_doc' %}">Добавить докуменнт</a>
+    <a href="{% url 'todolist:upload_doc' %}">Добавить документ</a>
+
+    {% bootstrap_pagination page size='sm' pages_to_show=5 %}
 </div>
 {% endblock %}

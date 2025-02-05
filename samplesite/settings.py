@@ -13,8 +13,17 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 
 from captcha.conf.settings import CAPTCHA_TIMEOUT, CAPTCHA_LENGTH
-from django.conf.global_settings import (STATICFILES_DIRS, ABSOLUTE_URL_OVERRIDES, MEDIA_URL, 
-                                         AUTH_USER_MODEL, EMAIL_BACKEND, DEFAULT_FROM_EMAIL, EMAIL_HOST)
+from django.conf.global_settings import (
+    STATICFILES_DIRS,
+    ABSOLUTE_URL_OVERRIDES,
+    MEDIA_URL,
+    AUTH_USER_MODEL,
+    EMAIL_BACKEND,
+    DEFAULT_FROM_EMAIL,
+    EMAIL_HOST,
+    CACHE_MIDDLEWARE_ALIAS,
+    CACHE_MIDDLEWARE_SECONDS,
+)
 from django.contrib import messages
 from django_bootstrap5.core import BOOTSTRAP5
 
@@ -354,10 +363,10 @@ CACHES = {
         "TIMEOUT": 120,  # ПО УМОЛЧАНИЮ ЗНАЧЕНИЕ 300 сек (время хранения кэша)
         "OPTIONS": {
             "MAX_ENTRIES": 200,
-        },
+        }
     },
     "redis": {
-        "BACKEND": "django_radis.cache.RedisCache",
+        "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://localhost:6379/0",
     },
 }

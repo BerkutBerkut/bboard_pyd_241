@@ -28,7 +28,15 @@ class TodoListView(ListView):
     model = Todo
     template_name = 'todolist/todo_list.html'
     context_object_name = "tasks"
-    paginate_by = 1 # 1 задачу на страницу
+    
+    def get(self, request, *args, **kwargs):
+        tasks = self.model.objects.all()
+        paginator = Paginator(tasks, 1)
+        page_num = request.GET.get('page', 1)
+        page = paginator.get_page(page_num)
+
+        return render(request, self.template_name, {'page': page})
+
 
     # def render_to_response(self, context, **response_kwargs):
     #     tasks = list(
@@ -214,18 +222,29 @@ def upload_doc(request):
 def img_list(request):
     img_objects = Img.objects.all()
     paginator = Paginator(img_objects, 1) # 1 изображение на странице
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
-    return render(request, "todolist/img_list.html", {"page_obj": page_obj}) 
+    
+    if 'page' in request.GET:
+        page_num = request.GET['page']
+    else:
+        page_num = 1
+
+    page = paginator.get_page(page_num)
+    return render(request, "todolist/img_list.html", {"page": page})
 
 
 # Вывод документов
 def doc_list(request):
     doc_objects = Doc.objects.all()
-    paginator = Paginator(doc_objects, 5)  # 1 документ на страницу
+    paginator = Paginator(doc_objects, 1)  # 1 документ на страницу
     page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
-    return render(request, "todolist/doc_list.html", {"page_obj": page_obj})
+    
+    if "page" in request.GET:
+        page_num = request.GET["page"]
+    else:
+        page_num = 1
+
+    page = paginator.get_page(page_num)
+    return render(request, "todolist/doc_list.html", {"page": page})
 
 
 # удаление картинок
