@@ -13976,3 +13976,113 @@ Traceback (most recent call last):
 TypeError: 'method' object is not subscriptable
 Not Found: /detail/1/...
 Not Found: /todolist/img_list/images/sm_dZpgs5O.jpg
+Not Found: /favicon.ico
+Not Found: /detail/20/...
+Not Found: /detail/20/...
+Internal Server Error: /add/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\views.py", line 185, in form_valid
+    add_bb.send(sender=self.__class__, instance=self.get_object)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\signals.py", line 60, in add_bb_dispatcher
+    print(f"{instance.rubric.name}, {instance.price}")
+             ^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'rubric'
+Internal Server Error: /add/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\views.py", line 185, in form_valid
+    add_bb.send(sender=self.__class__, instance=self.get_object)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\signals.py", line 60, in add_bb_dispatcher
+    print(f"{instance.rubric.name}, {instance.price}")
+             ^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'rubric'
+Not Found: /detail/24/...
+Internal Server Error: /add/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\views.py", line 185, in form_valid
+    add_bb.send(sender=self.__class__, instance=self.get_object)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\bboard\signals.py", line 60, in add_bb_dispatcher
+    print(f"{instance.rubric.name}, {instance.price}")
+             ^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'rubric'
+Not Found: /favicon.ico

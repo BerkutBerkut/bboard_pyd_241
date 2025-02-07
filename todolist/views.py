@@ -7,6 +7,8 @@ from django.views.generic import (ListView, DetailView, CreateView,
 from todolist.forms import SimpleForm, ImgForm, DocForm
 
 from django.core.paginator import Paginator
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 from django.urls import reverse_lazy
 
@@ -106,11 +108,12 @@ class TodoDetailView(DetailView):
 
 # Создание задачи
 # @method_decorator(csrf_exempt, name="dispatch")
-class TodoCreateView(CreateView):
+class TodoCreateView(SuccessMessageMixin, CreateView):
     model = Todo
     fields = ["title", "description", "completed"]
     template_name = "todolist/todo_create.html"
     success_url = reverse_lazy("todolist:todo_list")
+    success_message = "Очередная задача  созданна!" # Всплывающее сообщение
 
     # def post(self, request, *args, **kwargs):
     #     data = json.loads(request.body)
@@ -261,3 +264,6 @@ def delete_doc(request, pk):
     file.file.delete(save=False)
     file.delete()
     return redirect("todolist:doc_list")
+
+
+

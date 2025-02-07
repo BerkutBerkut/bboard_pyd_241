@@ -298,7 +298,7 @@ class Bb(models.Model):
             errors['content'] = ValidationError('Укажите описание товара')
 
         if self.price and self.price < 0:
-            errors['price'] = ValidationError('Укажите неоьрицательное'
+            errors['price'] = ValidationError('Укажите неоtрицательное'
                                               'значение цены')
         if errors:
             raise ValidationError(errors)

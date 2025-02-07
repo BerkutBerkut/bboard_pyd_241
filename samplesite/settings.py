@@ -52,7 +52,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     # 'django.contrib.postgres',
+
     "captcha",
     "precise_bbcode",
     "django_bootstrap5",
@@ -60,6 +62,7 @@ INSTALLED_APPS = [
     "bboard",  # 'bboard.apps.BboardConfig',
     "testapp",
     "todolist",
+    
     "django_cleanup",  # всегда в самом низу!!!
 ]
 
