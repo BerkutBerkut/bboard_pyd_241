@@ -300,10 +300,10 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db' # по умолчанию
 # MESSAGE_LEVEL = 20
 # MESSAGE_LEVEL = messages.DEBUG
 
-# CRITICAL = 50
-# MESSAGE_TAGS = {
-#     CRITICAL: 'critical'
-# }
+CRITICAL = 50
+MESSAGE_TAGS = {
+    CRITICAL: 'critical'
+}
 
 #####################
 ####### Email #######

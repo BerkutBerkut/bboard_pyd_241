@@ -1,0 +1,22 @@
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <!-- <div class="alert alter-{{ message.tags }}"> -->
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+
+
+    <!-- <script> -->
+        <!-- setTimeout(function() { -->
+            <!-- let messages = document.querySelectorAll('.alert'); -->
+            <!-- messages.forEach(function(msg) { -->
+                <!-- msg.style.transition = 'opacity 0.5s'; -->
+                <!-- msg.style.opacity = '0'; -->
+                <!-- setTimeout(() => msg.remove(), 500); -->
+            <!-- }); -->
+        <!-- }, 3000); // уведомления исчезнут через 3 секунды -->
+    <!-- </script> -->
+{% endif %}

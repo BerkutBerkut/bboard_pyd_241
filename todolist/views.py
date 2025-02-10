@@ -114,6 +114,7 @@ class TodoCreateView(SuccessMessageMixin, CreateView):
     template_name = "todolist/todo_create.html"
     success_url = reverse_lazy("todolist:todo_list")
     success_message = "Очередная задача  созданна!" # Всплывающее сообщение
+    
 
     # def post(self, request, *args, **kwargs):
     #     data = json.loads(request.body)
@@ -152,6 +153,8 @@ class TodoDeleteView(DeleteView):
     template_name = "todolist/todo_delete.html"
     success_url = reverse_lazy("todolist:todo_list")
     context_object_name = 'task' 
+    
+
 
     # def delete(self, request, *args, **kwargs):
     #     task = get_object_or_404(Todo, id=kwargs["pk"])
@@ -203,7 +206,10 @@ def upload_img(request):
         form = ImgForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Изображение успешно добавленно!")
             return redirect("todolist:success")
+        else:
+            messages.error(request, "Ошибка при добавлений изображения") 
     else:
         form = ImgForm()
     return render(request, "todolist/upload_img.html", {"img_form": form})
@@ -215,7 +221,10 @@ def upload_doc(request):
         form = DocForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Документ успешно добавлен!")
             return redirect("todolist:success")
+        else:
+            messages.error(request, "Ошибка при добавлений документа")
     else:
         form = DocForm()
     return render(request, "todolist/upload_doc.html", {"doc_form": form})
@@ -266,4 +275,7 @@ def delete_doc(request, pk):
     return redirect("todolist:doc_list")
 
 
-
+def some_view(request):
+    messages.info(request, "Это информационное уведомление")
+    messages.warning(request, "Осторожно! Возможна ошибка")
+    return redirect("todolist:todo_list")

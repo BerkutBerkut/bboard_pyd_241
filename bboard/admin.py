@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.db.models import F
 
 from bboard.models import Rubric, Bb
+from testapp.models import Machine, Spare
 
 
 # @admin.display(description='Название и рубрика')
@@ -17,7 +19,7 @@ class PriceListFilter(admin.SimpleListFilter):
             ("medium", "Средняя"),
             ("high", "Высокая"),
         )
-    
+
     def queryset(self, request, queryset):
         if self.value() == 'low':
             return queryset.filter(price__lt=500)
@@ -27,7 +29,42 @@ class PriceListFilter(admin.SimpleListFilter):
         elif self.value()  == 'high':
             return queryset.filter(price__gt=5000)
 
+@admin.action(description='Уменьшить цену вдое')
+def discount(modeladmin, request, queryset):
+    f = F('price')
+    for rec in queryset:
+        # rec.price = f / 2
+        rec.save()
+    modeladmin.message_user(request, 'Действие выполнено!')
 
+# class BbInLine(admin.TabularInline):
+class BbInLine(admin.StackedInline):
+    model = Bb
+    extra = 1
+
+    def get_extra(self, request, obj=None, **kwargs):
+        if obj:
+            return 3
+        else:
+            return 10
+
+
+@admin.register(Rubric)
+class RubricAdmin(admin.ModelAdmin):
+    list_display = ("__str__", "order")
+    search_fields = ('name',)
+    # inlines = [BbInLine]
+    inlines = (BbInLine,)
+
+    def get_inlines(self, request, obj=None):
+        if obj:
+            return ()
+        else:
+            return (BbInLine)
+
+
+# @admin.register(Bb, Rubric, Machine, Spare)
+@admin.register(Bb)
 class BbAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'price', 'published', 'rubric')
     # list_display = ("title_and_price", "content", "published", "rubric")
@@ -67,6 +104,8 @@ class BbAdmin(admin.ModelAdmin):
 
     list_filter = (PriceListFilter,)
 
+    autocomplete_fields = ('rubric',)
+
     #### Страницы добавления и правки ####
     # fields = ('title','price', 'content')
     # fields = (('title','price'), 'content')
@@ -79,19 +118,19 @@ class BbAdmin(admin.ModelAdmin):
     #     return f
 
     # exclude = ('rubric', 'kind')
-    readonly_fields = ('published',)
+    # readonly_fields = ('published',)
 
-    fieldsets = (
-        (None,
-            {
-                "fields": (("title", "rubric"), "content"),
-                "classes": ("wide",),
-            }),
-        ("Дополнительные сведения", {
-            'fields': ('price',),
-            'description': 'Параметры необязательны для указания.'
-        }),
-    )
+    # fieldsets = (
+    #     (None,
+    #         {
+    #             "fields": (("title", "rubric"), "content"),
+    #             "classes": ("wide",),
+    #         }),
+    #     ("Дополнительные сведения", {
+    #         'fields': ('price',),
+    #         'description': 'Параметры необязательны для указания.'
+    #     }),
+    # )
 
     # def get_form(self, request, obj=None, **kwargs):
     #     if obj:
@@ -99,9 +138,11 @@ class BbAdmin(admin.ModelAdmin):
     #     else:
     #         return BbAddModelForm
 
-class RubricAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'order')
+    # radio_fields = {'kind': admin.HORIZONTAL,
+    #                 'rubric': admin.VERTICAL}
+
+    actions = (discount,)
 
 
-admin.site.register(Rubric, RubricAdmin)
-admin.site.register(Bb, BbAdmin)
+# admin.site.register(Rubric, RubricAdmin)
+# admin.site.register(Bb, BbAdmin)

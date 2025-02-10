@@ -22,6 +22,8 @@
     {% include 'todolist/includes/navbar.html' %}
 
     <main>
+
+        {% include 'todolist/includes/_messages.html' %} <!-- Вставляем блок уведомлений -->
         {% block content %}{% endblock %}
         
     </main>

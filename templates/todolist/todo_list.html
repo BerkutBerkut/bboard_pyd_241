@@ -6,16 +6,16 @@
 
 {% block content %}
 
-{% if messages %}
-<ul class="messages messagelist">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
-        {{ message }}
-        </li>
-        {% endfor %}
-</ul>
-{% endif %}
-
+{# {% if messages %} #}
+{# <ul class="messages messagelist"> #}
+    {# { % for message in messages %} #}
+    {# <li{% if message.tags %} class="{{ message.tags }}" {% endif %}> #}
+{#        {{ message }} #}
+        {# </li> #}
+{#        {% endfor %} #}
+{# </ul>  #}
+{# {% endif %} #}
+    {# {% include 'todolist/includes/_messages.html' %} #} <!-- Вставляем блок уведомлений -->
     <h2>Список задач</h2>
     <ul>
         {% for task in page %}
