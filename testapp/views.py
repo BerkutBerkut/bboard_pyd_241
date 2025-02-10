@@ -32,7 +32,6 @@ def test_cookie(request):
 
 
 def test_email(request):
-
     ##### Низкоуровневые #####
     # em = EmailMessage(subject='Тест', body='Тест',
     #                   to=['yser@supersite.kz'])
@@ -110,6 +109,11 @@ def test_email(request):
 
     return render(request, "testapp/test_email.html")
 
+
+def hide_comment(request):
+    if request.user.has_perm('testapp.hide_comments'):
+        # пользвователь может скрывать комментарии
+        pass
 
 # Выводим данные первого пользователя
 class FirstUserView(View):

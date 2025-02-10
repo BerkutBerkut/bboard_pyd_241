@@ -3,19 +3,24 @@ from django.contrib.auth.models import User, AbstractUser
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
 
+
+# Вернуть потом
 class AdvUser(models.Model):
     is_activated = models.BooleanField(default=True)
 
 # class ProFile(models.Model):
-#     is_activated = models.BooleanField(default=True)
 #     phone = models.CharField(max_length=20)
 #     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
 
 # class AdvUser(AbstractUser):
 #     phone = models.CharField(max_length=20)
 
 # class AdvUser(User):
 #     phone = models.CharField(max_length=20)
+
+#     class Meta:
+#         proxy = True
 
 
 class Spare(models.Model):
@@ -67,6 +72,7 @@ class PrivateMessage(Message):
     def __str__(self):
         return f"PrivateMessage to {self.user.username}"
 
+
 # Двойное последовательное наследование
 class MegaPrivateMessage(PrivateMessage):
     priority = models.IntegerField(default=1)
@@ -106,3 +112,13 @@ class SMS(models.Model):
 
     def __str__(self):
         return f"From {self.sender} to {self.receiver}"
+
+
+class Comment(models.Model):
+    content = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        permissions = (
+            ("hide_comments", "Можно скрывать комментарии"),
+        )

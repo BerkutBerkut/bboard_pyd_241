@@ -60,7 +60,7 @@ class RubricAdmin(admin.ModelAdmin):
         if obj:
             return ()
         else:
-            return (BbInLine)
+            return (BbInLine,)
 
 
 # @admin.register(Bb, Rubric, Machine, Spare)
@@ -104,8 +104,6 @@ class BbAdmin(admin.ModelAdmin):
 
     list_filter = (PriceListFilter,)
 
-    autocomplete_fields = ('rubric',)
-
     #### Страницы добавления и правки ####
     # fields = ('title','price', 'content')
     # fields = (('title','price'), 'content')
@@ -141,6 +139,7 @@ class BbAdmin(admin.ModelAdmin):
     # radio_fields = {'kind': admin.HORIZONTAL,
     #                 'rubric': admin.VERTICAL}
 
+    autocomplete_fields = ("rubric",)
     actions = (discount,)
 
 
