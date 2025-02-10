@@ -6,16 +6,7 @@
 
 {% block content %}
 
-{# {% if messages %} #}
-{# <ul class="messages messagelist"> #}
-    {# { % for message in messages %} #}
-    {# <li{% if message.tags %} class="{{ message.tags }}" {% endif %}> #}
-{#        {{ message }} #}
-        {# </li> #}
-{#        {% endfor %} #}
-{# </ul>  #}
-{# {% endif %} #}
-    {# {% include 'todolist/includes/_messages.html' %} #} <!-- Вставляем блок уведомлений -->
+
     <h2>Список задач</h2>
     <ul>
         {% for task in page %}
@@ -29,6 +20,7 @@
             <p>Нет задач.</p>
         {% endfor %}
     </ul>
+    <a href="{% url 'todolist:secure_task' %}">Подписать задачу</a>
     <a href="{% url 'todolist:todo_create' %}">Добавить задачу</a>
 
     {% bootstrap_pagination page size='sm' pages_to_show=3 %}

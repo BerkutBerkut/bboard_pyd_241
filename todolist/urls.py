@@ -16,6 +16,8 @@ from todolist.views import (
     doc_list,
     delete_img,
     delete_doc,
+    secure_task,
+    verify_task
 )
 from todolist.views import (IndexView, TodoListView, TodoDetailView, 
                             TodoCreateView, TodoDeleteView, TodoUpdateView)
@@ -49,4 +51,7 @@ urlpatterns = [
     path("doc_list/", doc_list, name="doc_list"),
     path("delete_img/<int:pk>/", delete_img, name="delete_img"),
     path("delete_doc/<int:pk>/", delete_doc, name="delete_doc"),
+
+    path("secure_task/", secure_task, name="secure_task"),
+    path("verify_task/<str:signed_task>/", verify_task, name="verify_task"),
 ]

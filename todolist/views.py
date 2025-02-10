@@ -7,6 +7,8 @@ from django.views.generic import (ListView, DetailView, CreateView,
 from todolist.forms import SimpleForm, ImgForm, DocForm
 
 from django.core.paginator import Paginator
+from django.core.signing import Signer, BadSignature
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -206,7 +208,9 @@ def upload_img(request):
         form = ImgForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, "Изображение успешно добавленно!")
+            CRITICAL = 50
+            # messages.success(request, "Изображение успешно добавленно!")
+            messages.add_message(request, CRITICAL, "Зря ты это сделал!")
             return redirect("todolist:success")
         else:
             messages.error(request, "Ошибка при добавлений изображения") 
@@ -274,8 +278,25 @@ def delete_doc(request, pk):
     file.delete()
     return redirect("todolist:doc_list")
 
+signer = Signer()
+# подписывание данных
+def secure_task(request):
+    signed_task = None
 
-def some_view(request):
-    messages.info(request, "Это информационное уведомление")
-    messages.warning(request, "Осторожно! Возможна ошибка")
-    return redirect("todolist:todo_list")
+    if request.method == 'POST':
+        task_id = request.POST.get("task_id") # Получение ID задачи из формы
+        if task_id:
+            signed_task = signer.sign(task_id) # Подписываем задачу
+
+    return render(request, 'todolist/secure_task.html', {"signed_task": signed_task})
+
+
+# проверка подписи
+def verify_task(request, signed_task):
+    try:
+        task_id = signer.unsign(signed_task)
+        message = f"Подпись верна! ID задачи: {task_id}"
+    except BadSignature:
+        message = f"Ошибка! Подпись недействительна или была изменена."
+
+    return render(request, "todolist/verify_task.html", {"message": message})

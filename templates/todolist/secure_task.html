@@ -1,0 +1,30 @@
+{% extends 'todolist/includes/todo_base.html' %}
+
+{% block title %}Подписать задачу{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Подписать задачу</h2>
+
+    <!-- Форма для ввода ID задачи -->
+    <form method="post" class="mt-3">
+        {% csrf_token %}
+        <label for="task_id">Введите ID задачи:</label>
+        <input type="text" name="task_id" id="task_id" class="form-control" required>
+        <button type="submit" class="btn btn-success mt-2">Подписать</button>
+    </form>
+
+    {% if signed_task %}
+    <div class="alert alert-info mt-4">
+        <h4>Подписанный идентификатор задачи:</h4>
+        <code>{{ signed_task }}</code>
+        <p>
+            Это уникальная подпись для вашей задачи. Вы можете использовать её для защиты данных от подделки.
+        </p>
+        <a href="{% url 'todolist:verify_task' signed_task %}" class="btn btn-primary">Проверить подпись</a>
+    </div>
+    {% endif %}
+
+    <a href="{% url 'todolist:todo_list' %}" class="btn btn-secondary mt-3">Вернуться к списку задач</a>
+</div>
+{% endblock %}

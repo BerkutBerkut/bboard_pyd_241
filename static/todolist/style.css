@@ -38,3 +38,8 @@ section {
     background-color: #f8d7da;
     color: #721c24;
 }
+
+.alert-critical {
+    background-color: #9cbde7;
+    color: #300b79;
+}
