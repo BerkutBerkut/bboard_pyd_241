@@ -2,15 +2,25 @@ from django.db import models
 from django.contrib.auth.models import User, AbstractUser
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
-
+from django.core.validators import EmailValidator
 
 # Вернуть потом
 class AdvUser(models.Model):
     is_activated = models.BooleanField(default=True)
 
-# class ProFile(models.Model):
-#     phone = models.CharField(max_length=20)
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField(
+        unique=False,
+        validators=[EmailValidator(message="Введите корректный email")],
+        blank=True,
+        null=True,
+    )
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
+
+    def __str__(self):
+        return f'Профиль {self.user.username}'
 
 
 # class AdvUser(AbstractUser):
