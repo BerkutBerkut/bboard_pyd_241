@@ -20,7 +20,7 @@ from bboard.views import (
     log_request_data,
     my_login,
     my_logout,
-    all_users_group_view,
+    all_users_group_view, api_rubrics, api_rubric_detail
 )
 from django.views.decorators.cache import cache_page
 
@@ -28,6 +28,8 @@ from django.views.decorators.cache import cache_page
 app_name = 'bboard'
 
 urlpatterns = [
+    path("api/rubrics/<int:pk>/", api_rubric_detail),
+    path("api/rubrics/", api_rubrics),
     path("", my_login, name="home"),  # Перенаправление на авторизацию
     path("login/", my_login, name="login"),  # URL для входа
     path("logout/", my_logout, name="logout"),  # URL для выхода
@@ -49,13 +51,13 @@ urlpatterns = [
     path("edit/<int:pk>/", BbEditView.as_view(), name="edit"),
     # path('edit/<int:pk>/', edit, name='edit'),
     path("delete/<int:pk>/", BbDeleteView.as_view(), name="delete"),
-
-    path("<int:rubric_id>/",
+    path(
+        "<int:rubric_id>/",
         BbRubricBbsView.as_view(),
         # cache_page(60 * 5)(BbRubricBbsView.as_view()),
         # cache_page(30)(BbRubricBbsView.as_view()),
-        name="by_rubric"),
-
+        name="by_rubric",
+    ),
     path("detail/<int:pk>/", BbDetailView.as_view(), name="detail"),
     # path("create_icecream/", create_icecream, name="create_icecreame"),
     path("manage_icecreams/", manage_icecreams, name="manage_icecreams"),

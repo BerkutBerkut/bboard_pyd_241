@@ -28,6 +28,12 @@ from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteVi
 
 from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
 from bboard.models import Bb, Rubric, Icecream, Img
+
+from bboard.serializers import RubricSerializer
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
 from bboard.signals import add_bb
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_headers, vary_on_cookie
@@ -594,3 +600,22 @@ def my_logout(request):
 # Контроллер для контекстного обработчика
 def all_users_group_view(request):
     return render(request, "bboard/context_user_groups.html")
+
+###########
+### DRF ###
+###########
+
+@api_view(['GET'])
+def api_rubrics(request):
+    if request.method == 'GET':
+        rubrics = Rubric.objects.all()
+        serializer = RubricSerializer(rubrics, many=True)
+        # return JsonResponse(serializer.data, safe=False)
+        return Response(serializer.data)
+
+
+@api_view(["GET"])
+def api_rubric_detail(request, pk):
+    rubric = Rubric.objects.get(pk=pk)
+    serializer = RubricSerializer(rubric)
+    return Response(serializer.data)
