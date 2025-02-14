@@ -14823,3 +14823,6 @@ Traceback (most recent call last):
 django.db.utils.OperationalError: no such table: testapp_profile
 Not Found: /testapp/test_cookie
 Not Found: /testapp/test_email/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /tasks/

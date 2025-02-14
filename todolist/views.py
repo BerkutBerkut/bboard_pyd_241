@@ -9,6 +9,8 @@ from todolist.forms import SimpleForm, ImgForm, DocForm
 from django.core.paginator import Paginator
 from django.core.signing import Signer, BadSignature
 
+from django.core.cache import cache
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -32,16 +34,31 @@ class TodoListView(ListView):
     model = Todo
     template_name = 'todolist/todo_list.html'
     context_object_name = "tasks"
-    
+
+    # def get(self, request, *args, **kwargs):
+    #     tasks = self.model.objects.all()
+    #     paginator = Paginator(tasks, 1)
+    #     page_num = request.GET.get('page', 1)
+    #     page = paginator.get_page(page_num)
+
+    #     return render(request, self.template_name, {'page': page})
+
+    # функция кэширования
     def get(self, request, *args, **kwargs):
-        tasks = self.model.objects.all()
+        # проверяем кэш
+        tasks = cache.get('todo_list')
+
+        if not tasks:
+            tasks = Todo.objects.all()
+            cache.set("todo_list", tasks, timeout=60 * 5)  # храним в Redis 5 мин
+
         paginator = Paginator(tasks, 1)
-        page_num = request.GET.get('page', 1)
+        page_num = request.GET.get("page", 1)
         page = paginator.get_page(page_num)
 
-        return render(request, self.template_name, {'page': page})
+        return render(request, self.template_name, {"page": page})
 
-
+    
     # def render_to_response(self, context, **response_kwargs):
     #     tasks = list(
     #         context["tasks"].values(

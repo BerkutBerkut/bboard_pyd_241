@@ -372,6 +372,10 @@ CACHES = {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://localhost:6379/0",
     },
+    "special": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "cache2"
+    }
 }
 
 # CACHE_MIDDLEWARE_ALIAS = "default"
