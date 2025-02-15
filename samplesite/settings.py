@@ -162,7 +162,8 @@ AUTH_PASSWORD_VALIDATORS = [
     # },
 ]
 
-# AUTH_USER_MODEL = 'testapp.models.AdvUser'
+# AUTH_USER_MODEL = 'testapp.AdvUser'
+# AUTH_USER_MODEL = 'testapp.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -401,4 +402,3 @@ CORS_ALLOW_ALL_ORIGINS = True
 # ]
 # CORS_ALLOW_METHODS = ['GET', 'POST']
 CORS_URLS_REGEX = r'^/api/.*$'
-

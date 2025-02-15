@@ -8,6 +8,7 @@ from django.core.validators import EmailValidator
 class AdvUser(models.Model):
     is_activated = models.BooleanField(default=True)
 
+# Реализация через связь к текущей модели
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=20)
@@ -18,9 +19,28 @@ class Profile(models.Model):
         null=True,
     )
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
+    # Дополнителные поля для модуля пользователя
+    # birth_date = models.DateField(null=True, blank=True) # Дата рождения 
+    # bio = models.TextField(blank=True) # информация о пользователе
 
     def __str__(self):
         return f'Профиль {self.user.username}'
+
+# Реализация через наследование от абстрактного класса
+# class CustomUser(models.Model):
+#     phone = models.CharField(max_length=20)
+#     email = models.EmailField(
+#         unique=False,
+#         validators=[EmailValidator(message="Введите корректный email")],
+#         blank=True,
+#         null=True,
+#     )
+#     avatar = models.ImageField(upload_to="avatars/", blank=True, null=True)
+#     birth_date = models.DateField(null=True, blank=True)  # Дата рождения
+#     bio = models.TextField(blank=True)  # информация о пользователе
+
+#     def __str__(self):
+#         return f"Профиль {self.user.username}"
 
 
 # class AdvUser(AbstractUser):
