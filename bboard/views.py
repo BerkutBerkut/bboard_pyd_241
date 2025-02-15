@@ -1,9 +1,7 @@
 from django.contrib.auth import get_user, authenticate, login, logout
-
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, user_passes_test, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
 from django.contrib import messages
 
 from django.core.paginator import Paginator
@@ -11,8 +9,10 @@ from django.db import transaction, DatabaseError
 from django.db.models import Count
 from django.forms import modelformset_factory
 from django.forms.models import inlineformset_factory
+
 from django.http import (HttpResponse, HttpResponseRedirect, HttpResponseNotFound,
                          Http404, StreamingHttpResponse, FileResponse, JsonResponse)
+
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from django.template import loader
 from django.template.loader import render_to_string
@@ -25,18 +25,16 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView, SingleObjectMixin
 from django.views.generic.base import View, TemplateView
 from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
-
-from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
-from bboard.models import Bb, Rubric, Icecream, Img
-
-from bboard.serializers import RubricSerializer
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_headers, vary_on_cookie
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
+from bboard.models import Bb, Rubric, Icecream, Img
+from bboard.serializers import RubricSerializer
 from bboard.signals import add_bb
-from django.views.decorators.cache import cache_page
-from django.views.decorators.vary import vary_on_headers, vary_on_cookie
 
 import logging
 

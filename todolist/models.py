@@ -7,13 +7,18 @@ class Todo(models.Model):
         max_length=50,
         verbose_name='Задача',
     )
-    description = models.TextField(blank=True, null=True)
-    completed = models.BooleanField(default=False) # Статус выполнения
-    created_at = models.DateTimeField(auto_now_add=True) # Дата создания
-    updated_at = models.DateTimeField(auto_now=True) # Дата обновления
+    description = models.TextField(blank=True, null=True, verbose_name="Описание") # Описание
+    completed = models.BooleanField(default=False, verbose_name="Выполнено") # Статус выполнения
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания") # Дата создания
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата обновления") # Дата обновления
 
     def __str__(self):
         return self.title 
+    
+    class Meta:
+        verbose_name = "Задача"
+        verbose_name_plural = "Задачи"
+        ordering = ["-created_at"]
 
 
 class Img(models.Model):

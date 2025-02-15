@@ -14826,3 +14826,7 @@ Not Found: /testapp/test_email/
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /tasks/
+Not Found: /admin/
+Not Found: /admin/
+Not Found: /admin/todolist/todo/
+Not Found: /favicon.ico

@@ -57,12 +57,9 @@ urlpatterns = [
         PasswordResetCompleteView.as_view(),
         name="password_reset_complete",
     ),
-
-    
-    path('todolist/', include('todolist.urls', namespace='todolist')),
+    path("todolist/", include("todolist.urls", namespace="todolist")),
     path("testapp/", include("testapp.urls", namespace="testapp")),
     path("captcha/", include("captcha.urls")),
-
     path("", include("bboard.urls", namespace="bboard")),
 ]
 
