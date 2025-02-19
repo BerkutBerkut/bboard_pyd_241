@@ -36,7 +36,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
 from bboard.models import Bb, Rubric, Icecream, Img
-from bboard.serializers import RubricSerializer
+from bboard.serializers import RubricSerializer, BbSerializer
 from bboard.signals import add_bb
 
 import logging
@@ -622,6 +622,24 @@ def api_rubrics(request):
         return Response(serializer.errors,
                         status=status.HTTP_400_BAD_REQUEST)
 
+
+@api_view(["GET", "POST"])
+def api_bbs(request):
+    if request.method == "GET":
+        bbs = Bb.objects.all()
+        serializer = BbSerializer(bbs, many=True)
+        return Response(serializer.data)
+    elif request.method == "POST":
+        serializer = BbSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, 
+                            status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, 
+                        status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(["GET", "PUT", "PATCH", "DELETE"])
 def api_rubric_detail(request, pk):
     rubric = Rubric.objects.get(pk=pk)
@@ -640,10 +658,29 @@ def api_rubric_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+@api_view(["GET", "PUT", "PATCH", "DELETE"])
+def api_bb_detail(request, pk):
+    bb = Bb.objects.get(pk=pk)
+    if request.method == "GET":
+        serializer = BbSerializer(bb)
+        return Response(serializer.data)
+    elif request.method == "PUT" or request.method == "PATCH":
+        serializer = BbSerializer(bb, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, 
+                        status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == "DELETE":
+        bb.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 ##### APIView #####
 # class APIRubrics(APIView):
 #     def get(self, request):
-#         rubrics = RubricSerializer(rubrics, many=True)
+#         rubrics = Rubric.objects.all()
+#         serializer = RubricSerializer(rubrics, many=True)
 #         return Response(serializer.data)
 
 #     def post(self, request):
@@ -655,6 +692,22 @@ def api_rubric_detail(request, pk):
 #         return Response(serializer.errors,
 #                         status=status.HTTP_400_BAD_REQUEST)
 
+# class APIBbs(APIView):
+#     def get(self, request):
+#         bbs = Bb.objects.all()
+#         serializer = BbSerializer(bbs, many=True)
+#         return Response(serializer.data)
+
+#     def post(self, request):
+#         serializer = BbSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data,
+#                             status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors,
+#                         status=status.HTTP_400_BAD_REQUEST)
+
+
 ##### generics ##### generics.RetrieveUpdateAPIView, generics.RetrieveDestroyAPIView
 class APIRubrics(generics.ListCreateAPIView):
     queryset = Rubric.objects.all()
@@ -664,12 +717,34 @@ class APIRubricDetail(generics.RetrieveUpdateDestroyAPIView):
     request = Rubric.objects.all()
     serializer_class = RubricSerializer
 
+
+class APIBbs(generics.ListCreateAPIView):
+    queryset = Bb.objects.all()
+    serializer_class = BbSerializer
+
+
+class APIBbDetail(generics.RetrieveUpdateDestroyAPIView):
+    request = Bb.objects.all()
+    serializer_class = BbSerializer
+
+
 ### ListAPIView, RetriveAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
 class APIRubricList(generics.ListAPIView):
     queryset = Rubric.objects.all()
     serializer_class = RubricSerializer
 
+
+class APIBbList(generics.ListAPIView):
+    queryset = Bb.objects.all()
+    serializer_class = BbSerializer
+
+
 ##### МЕТАКОНТРОЛЛЕРЫ #####
 class APIRubricViewSet(ModelViewSet):
     queryset = Rubric.objects.all()
     serializer_class = RubricSerializer
+
+
+class APIBbViewSet(ModelViewSet):
+    queryset = Bb.objects.all()
+    serializer_class = BbSerializer

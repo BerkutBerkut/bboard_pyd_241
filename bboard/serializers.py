@@ -8,3 +8,11 @@ class RubricSerializer(serializers.ModelSerializer):
         model = Rubric
         # __fields__ = '__all__'
         fields = ('id', 'name')
+
+
+class BbSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bb
+        # __fields__ = '__all__'
+        fields = ("id", "title", "content", "price")
+        

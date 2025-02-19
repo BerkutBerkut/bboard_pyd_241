@@ -5,10 +5,14 @@ from django.views.generic.edit import CreateView
 from rest_framework.routers import DefaultRouter
 
 from bboard.models import Bb
-from bboard.views import (index, by_rubric, BbCreateView,
-                          add_and_save, bb_detail, BbRubricBbsView,
-                          BbDetailView, BbEditView, BbDeleteView, BbIndexView,
-                          BbRedirectView, edit, rubrics, bbs)
+from bboard.views import (index, by_rubric, 
+                          BbCreateView,
+                          add_and_save, bb_detail, 
+                          BbRubricBbsView,
+                          BbDetailView, BbEditView,
+                          BbDeleteView, BbIndexView,
+                          BbRedirectView, edit, 
+                          rubrics, bbs)
 # from bboard.views import add_icecream
 from bboard.views import  manage_icecreams, success_view
 # from bboard.views import create_icecream
@@ -28,6 +32,11 @@ from bboard.views import (
     APIRubrics,
     APIRubricDetail,
     APIRubricViewSet,
+    api_bbs,
+    api_bb_detail,
+    APIBbs,
+    APIBbDetail,
+    APIBbViewSet,
 )
 from django.views.decorators.cache import cache_page
 
@@ -36,15 +45,22 @@ app_name = 'bboard'
 
 router = DefaultRouter()
 router.register('rubrics', APIRubricViewSet)
+router.register("bbs", APIBbViewSet)
 
 urlpatterns = [
     # path("api/rubrics/<int:pk>/", api_rubric_detail),
     # path("api/rubrics/", api_rubrics),
+    # path("api/bbs/<int:pk>/", api_bb_detail),
+    # path("api/bbs/", api_bbs),
     # path("api/rubrics/<int:pk>/", APIRubrics.as_view()),
     # path("api/rubrics/", APIRubrics.as_view()),
+    # path("api/bbs/<int:pk>/", APIBbs.as_view()),
+    # path("api/bbs/", APIBbs.as_view()),
     # path("api/rubrics/<int:pk>/", APIRubricDetail.as_view()),
     # path("api/rubrics/", APIRubrics.as_view()),
-    path('api/', include(router.urls)),
+    # path("api/bbs/<int:pk>/", APIBbDetail.as_view()),
+    # path("api/bbs/", APIBbs.as_view()),
+    path("api/", include(router.urls)),
     path("", my_login, name="home"),  # Перенаправление на авторизацию
     path("login/", my_login, name="login"),  # URL для входа
     path("logout/", my_logout, name="logout"),  # URL для выхода
