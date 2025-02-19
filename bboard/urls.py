@@ -1,6 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from django.views.generic.dates import WeekArchiveView, DayArchiveView
 from django.views.generic.edit import CreateView
+
+from rest_framework.routers import DefaultRouter
 
 from bboard.models import Bb
 from bboard.views import (index, by_rubric, BbCreateView,
@@ -20,16 +22,29 @@ from bboard.views import (
     log_request_data,
     my_login,
     my_logout,
-    all_users_group_view, api_rubrics, api_rubric_detail
+    all_users_group_view,
+    api_rubrics,
+    api_rubric_detail,
+    APIRubrics,
+    APIRubricDetail,
+    APIRubricViewSet,
 )
 from django.views.decorators.cache import cache_page
 
 
 app_name = 'bboard'
 
+router = DefaultRouter()
+router.register('rubrics', APIRubricViewSet)
+
 urlpatterns = [
-    path("api/rubrics/<int:pk>/", api_rubric_detail),
-    path("api/rubrics/", api_rubrics),
+    # path("api/rubrics/<int:pk>/", api_rubric_detail),
+    # path("api/rubrics/", api_rubrics),
+    # path("api/rubrics/<int:pk>/", APIRubrics.as_view()),
+    # path("api/rubrics/", APIRubrics.as_view()),
+    # path("api/rubrics/<int:pk>/", APIRubricDetail.as_view()),
+    # path("api/rubrics/", APIRubrics.as_view()),
+    path('api/', include(router.urls)),
     path("", my_login, name="home"),  # Перенаправление на авторизацию
     path("login/", my_login, name="login"),  # URL для входа
     path("logout/", my_logout, name="logout"),  # URL для выхода

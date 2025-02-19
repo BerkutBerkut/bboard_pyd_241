@@ -28,9 +28,11 @@ from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteVi
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_headers, vary_on_cookie
 
-from rest_framework import status
+from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
 
 from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
 from bboard.models import Bb, Rubric, Icecream, Img
@@ -636,4 +638,38 @@ def api_rubric_detail(request, pk):
     elif request.method == 'DELETE':
         rubric.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-        
+
+
+##### APIView #####
+# class APIRubrics(APIView):
+#     def get(self, request):
+#         rubrics = RubricSerializer(rubrics, many=True)
+#         return Response(serializer.data)
+
+#     def post(self, request):
+#         serializer = RubricSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data,
+#                             status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors,
+#                         status=status.HTTP_400_BAD_REQUEST)
+
+##### generics ##### generics.RetrieveUpdateAPIView, generics.RetrieveDestroyAPIView
+class APIRubrics(generics.ListCreateAPIView):
+    queryset = Rubric.objects.all()
+    serializer_class = RubricSerializer
+
+class APIRubricDetail(generics.RetrieveUpdateDestroyAPIView):
+    request = Rubric.objects.all()
+    serializer_class = RubricSerializer
+
+### ListAPIView, RetriveAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+class APIRubricList(generics.ListAPIView):
+    queryset = Rubric.objects.all()
+    serializer_class = RubricSerializer
+
+##### МЕТАКОНТРОЛЛЕРЫ #####
+class APIRubricViewSet(ModelViewSet):
+    queryset = Rubric.objects.all()
+    serializer_class = RubricSerializer

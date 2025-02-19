@@ -14833,3 +14833,81 @@ Not Found: /favicon.ico
 Not Found: /testapp/
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Not Found: /api/rubrics/10.
+Internal Server Error: /api/rubrics/3/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\db\models\base.py", line 1271, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\db\models\deletion.py", line 351, in collect
+    raise ProtectedError(
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Rubric' because they are referenced through protected foreign keys: 'Bb.rubric'.", {<Bb: Пылесос (1000.00 тг.)>, <Bb: Стиральная машина (3000.00 тг.)>, <Bb: тестим redirect (34576.00 тг.)>, <Bb: 11111 (1223.00 тг.)>, <Bb: 22222 (2222.00 тг.)>, <Bb: message (150.00 тг.)>, <Bb: 11111 (333.00 тг.)>})
+Internal Server Error: /api/rubrics/3/
+Traceback (most recent call last):
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\rest_framework\mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\db\models\base.py", line 1271, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "C:\Users\Беркут\Documents\PYTON STADY\ITSTEP\DJANGO_2\bboard_pyd_241\env\Lib\site-packages\django\db\models\deletion.py", line 351, in collect
+    raise ProtectedError(
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Rubric' because they are referenced through protected foreign keys: 'Bb.rubric'.", {<Bb: Пылесос (1000.00 тг.)>, <Bb: Стиральная машина (3000.00 тг.)>, <Bb: тестим redirect (34576.00 тг.)>, <Bb: 11111 (1223.00 тг.)>, <Bb: 22222 (2222.00 тг.)>, <Bb: message (150.00 тг.)>, <Bb: 11111 (333.00 тг.)>})
+Not Found: /api/rubrics/12/
+Not Found: /api/rubrics/10/
+Not Found: /api/rubrics/10/
+Not Found: /api/rubrics/10/
+Not Found: /api/rubrics/10/
+Not Found: /api/rubrics/9/
+Not Found: /api/rubrics/9/
+Bad Request: /api/rubrics/1/
+Bad Request: /api/rubrics/5/
+Bad Request: /api/rubrics/5/
+Bad Request: /api/rubrics/5/
