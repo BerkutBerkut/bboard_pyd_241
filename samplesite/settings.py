@@ -316,17 +316,23 @@ MESSAGE_TAGS = {
 ####### Email #######
 #####################
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # отправляет к серверу
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # отправляет к серверу
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend" # отправляет в какой-то файл
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # отправляет в консоль
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # отправляет в консоль
 # EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"  # сохраняет письмо в оперативн памяти
 # EMAIL_BACKEND = "django.core.mail.backends.dummy.EmailBackend"  # никуда не отправляет и не сораняет
-
+EMAIL_HOST = "smtp.yandex.ru"
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = "b.bbk@yandex.kz"
+EMAIL_HOST_PASSWORD = "avcjvqaispoptifi"
 
 # откого по умолчанию будем отпрравлять письмо
 DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+# DEFAULT_FROM_EMAIL = "b.bbk@yandex.kz"
 
 ### 'django.core.mail.smtp.EmailBackend' ###
+
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 25
 # EMAIL_HOST_USER = "" # вводить данные от себя, в их надо скрыть
