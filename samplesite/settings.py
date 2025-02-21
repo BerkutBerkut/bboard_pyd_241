@@ -408,3 +408,17 @@ CORS_ALLOW_ALL_ORIGINS = True
 # ]
 # CORS_ALLOW_METHODS = ['GET', 'POST']
 CORS_URLS_REGEX = r'^/api/.*$'
+
+
+# Доступ на весь сайт
+# REST_FRAMEWORK = {
+#     "DEFAULT_PERMISSION_CLASSES": (
+#         "rest_framework.permissions.AllowAny",  # по умолчанию, всем все доступно
+#         "rest_framework.permissions.IsAuthenticated",  # только аутентифицированным
+#         "rest_framework.permissions.IsAdminUser",  # только админам
+#         "rest_framework.permissions.IsAuthenticatedOrReadOnly",  # не аутентифицированным только читают
+#         "rest_framework.permissions.IsAdminUser",  # только админам
+#         "rest_framework.permissions.DjangoModelPermission",  # права из джанго
+#         "rest_framework.permissions.DjangoModelPermissionOrAnonReadOnly",  # права из Джанго или чтение
+#     )
+# }

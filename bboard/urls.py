@@ -58,9 +58,9 @@ urlpatterns = [
     # path("api/bbs/", APIBbs.as_view()),
     # path("api/rubrics/<int:pk>/", APIRubricDetail.as_view()),
     # path("api/rubrics/", APIRubrics.as_view()),
+    path("api/", include(router.urls)),
     # path("api/bbs/<int:pk>/", APIBbDetail.as_view()),
     # path("api/bbs/", APIBbs.as_view()),
-    path("api/", include(router.urls)),
     path("", my_login, name="home"),  # Перенаправление на авторизацию
     path("login/", my_login, name="login"),  # URL для входа
     path("logout/", my_logout, name="logout"),  # URL для выхода

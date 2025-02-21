@@ -1,6 +1,10 @@
 // console.log('Работает') проверка работы консоли
 
 const domain = 'http://localhost:8000/api/';
+const username = 'admin';
+const password = '123';
+
+const credentals = window.btoa(`${username}:${password}`)
 
 // const list = document.getElementById('list');
 const list = document.querySelector("#list");
@@ -28,7 +32,9 @@ async function deleteItem(evt) {
 }
 
 async function loadList() {
-    const result = await fetch(`${domain}rubrics`);
+    const result = await fetch(`${domain}rubrics/`, {
+        headers: { 'Authorization': `Basic ${credentals}` }
+    });
 
     if(result.ok) {
         const data = await result.json();
