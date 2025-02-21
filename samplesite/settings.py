@@ -72,21 +72,17 @@ INSTALLED_APPS = [
 # в MIDDLEWARE расположение строк очень важно
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    
     # "django.middleware.cache.UpdateCacheMiddleware",  # для кэша
     "django.contrib.sessions.middleware.SessionMiddleware",
-
-    'corsheaders.middleware.CorsMiddleware',
-
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     # "django.middleware.cache.FetchFromCacheMiddleware",  # для кэша
-
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-
     # "bboard.middleware.RubricMiddleware",
+    "bboard.middleware.LoginRequiredMiddleware",
 ]
 
 ROOT_URLCONF = 'samplesite.urls'
@@ -219,8 +215,8 @@ LOGGING = {
 }
 
 LOGIN_URL = "/login/" # URL для входа
-LOGIN_REDIRECT_URL = "bboard:index"  # URL после выхода
-LOGOUT_REDIRECT_URL = "bboard:index"  # URL после входа
+LOGIN_REDIRECT_URL = "bboard:index"  # URL после входа
+LOGOUT_REDIRECT_URL = "bboard:login"  # URL после выхода
 # PASSWORD_RESET_TIMEOUT = 60 * 60 * 24 * 3  # 259_200
 
 # CAPTCHA
@@ -411,14 +407,14 @@ CORS_URLS_REGEX = r'^/api/.*$'
 
 
 # Доступ на весь сайт
-# REST_FRAMEWORK = {
-#     "DEFAULT_PERMISSION_CLASSES": (
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": (
 #         "rest_framework.permissions.AllowAny",  # по умолчанию, всем все доступно
-#         "rest_framework.permissions.IsAuthenticated",  # только аутентифицированным
+        "rest_framework.permissions.IsAuthenticated",  # только аутентифицированным
 #         "rest_framework.permissions.IsAdminUser",  # только админам
 #         "rest_framework.permissions.IsAuthenticatedOrReadOnly",  # не аутентифицированным только читают
 #         "rest_framework.permissions.IsAdminUser",  # только админам
 #         "rest_framework.permissions.DjangoModelPermission",  # права из джанго
 #         "rest_framework.permissions.DjangoModelPermissionOrAnonReadOnly",  # права из Джанго или чтение
-#     )
-# }
+    )
+}

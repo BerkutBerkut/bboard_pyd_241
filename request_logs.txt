@@ -17986,3 +17986,38 @@ TypeError: 'BasePermissionMetaclass' object is not iterable
 Forbidden: /api/rubrics/
 Not Found: /api/rubrics/
 Not Found: /api/rubrics/
+Not Found: /detail/25/...
+Forbidden: /api/rubrics/3/
+Forbidden: /api/rubrics/3/
+Forbidden: /api/rubrics/5/
+Forbidden: /api/rubrics/1/
+Forbidden: /api/rubrics/1/
+Forbidden: /api/rubrics/1/
+Forbidden: /api/rubrics/
+Not Found: /detail/26/...
+Forbidden: /api/
+Forbidden: /api/bbs/
+Forbidden: /api/
+Forbidden: /api/rubrics/3/
+Forbidden: /api/
+Forbidden: /api/rubrics/
+Not Found: /index/
+Not Found: /index/
+Not Found: /index/
+Not Found: /index/
+Not Found: /index/
+Forbidden: /api/rubrics/
+Not Found: /detail/16/...
+Forbidden: /api/
+Not Found: /login/
+Forbidden: /api/
+Not Found: /detail/2/...
+Not Found: /index/
+Not Found: /detail/25/...
+Not Found: /detail/8/...
+Not Found: /detail/26/...
+Forbidden: /api/
+Forbidden: /api/
+Forbidden: /api/
+Forbidden: /api/
+Not Found: /api/tasks/
