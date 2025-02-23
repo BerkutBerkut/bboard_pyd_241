@@ -607,9 +607,9 @@ def all_users_group_view(request):
 ### DRF ###
 ###########
 
-@login_required
-def my_protected_view(request):
-    return render(request, 'login.html')
+# @login_required
+# def my_protected_view(request):
+#     return render(request, 'login.html')
 
 @api_view(['GET', 'POST'])
 # @permission_classes((IsAuthenticated,))

@@ -38,7 +38,7 @@ from bboard.views import (
     APIBbs,
     APIBbDetail,
     APIBbViewSet,
-    my_protected_view,
+    # my_protected_view,
 )
 from django.views.decorators.cache import cache_page
 
@@ -50,7 +50,7 @@ router.register('rubrics', APIRubricViewSet)
 router.register("bbs", APIBbViewSet)
 
 urlpatterns = [
-    path("protected/", login_required(my_protected_view), name="protected-page"),
+    # path("protected/", login_required(my_protected_view), name="protected-page"),
     # path("api/rubrics/<int:pk>/", api_rubric_detail),
     # path("api/rubrics/", api_rubrics),
     # path("api/bbs/<int:pk>/", api_bb_detail),

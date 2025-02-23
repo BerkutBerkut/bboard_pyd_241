@@ -82,7 +82,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # "bboard.middleware.RubricMiddleware",
-    "bboard.middleware.LoginRequiredMiddleware",
+    # "bboard.middleware.LoginRequiredMiddleware",
 ]
 
 ROOT_URLCONF = 'samplesite.urls'
@@ -407,14 +407,14 @@ CORS_URLS_REGEX = r'^/api/.*$'
 
 
 # Доступ на весь сайт
-REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": (
+# REST_FRAMEWORK = {
+#     "DEFAULT_PERMISSION_CLASSES": (
 #         "rest_framework.permissions.AllowAny",  # по умолчанию, всем все доступно
-        "rest_framework.permissions.IsAuthenticated",  # только аутентифицированным
+#         "rest_framework.permissions.IsAuthenticated",  # только аутентифицированным
 #         "rest_framework.permissions.IsAdminUser",  # только админам
 #         "rest_framework.permissions.IsAuthenticatedOrReadOnly",  # не аутентифицированным только читают
 #         "rest_framework.permissions.IsAdminUser",  # только админам
 #         "rest_framework.permissions.DjangoModelPermission",  # права из джанго
 #         "rest_framework.permissions.DjangoModelPermissionOrAnonReadOnly",  # права из Джанго или чтение
-    )
-}
+#     )
+# }

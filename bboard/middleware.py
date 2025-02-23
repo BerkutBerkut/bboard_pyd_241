@@ -7,25 +7,25 @@ from django.conf import settings
 from bboard.models import Rubric
 
 
-EXEMPT_URLS = [
-    settings.LOGIN_URL,
-    '/logout/',
-    '/register/',
-]
-# Middleware для перенаправления неавторизованных пользователей на страницу входа.
-class LoginRequiredMiddleware:
-    def __init__(self, get_response):
-        self.get_response = get_response
+# EXEMPT_URLS = [
+#     settings.LOGIN_URL,
+#     '/logout/',
+#     '/register/',
+# ]
+# # Middleware для перенаправления неавторизованных пользователей на страницу входа.
+# class LoginRequiredMiddleware:
+#     def __init__(self, get_response):
+#         self.get_response = get_response
 
-    # def __call__(self, request):
-    #     if not request.user.is_authenticated and request.path not in [settings.LOGIN_URL, '/admin/']:
-    #         return redirect(settings.LOGIN_URL)  # Перенаправляем на страницу входа
-    #     return self.get_response(request)
+#     # def __call__(self, request):
+#     #     if not request.user.is_authenticated and request.path not in [settings.LOGIN_URL, '/admin/']:
+#     #         return redirect(settings.LOGIN_URL)  # Перенаправляем на страницу входа
+#     #     return self.get_response(request)
 
-    def __call__(self, request):
-        if not request.user.is_authenticated and not any(request.path.startswith(url) for url in EXEMPT_URLS):
-            return redirect(settings.LOGIN_URL)  # Перенаправляем на страницу входа
-        return self.get_response(request)
+#     def __call__(self, request):
+#         if not request.user.is_authenticated and not any(request.path.startswith(url) for url in EXEMPT_URLS):
+#             return redirect(settings.LOGIN_URL)  # Перенаправляем на страницу входа
+#         return self.get_response(request)
 
 
 # Посредник функция
