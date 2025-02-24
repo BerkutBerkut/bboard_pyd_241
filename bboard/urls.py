@@ -33,6 +33,7 @@ from bboard.views import (
     APIRubrics,
     APIRubricDetail,
     APIRubricViewSet,
+    CreateUserAPIView,
     api_bbs,
     api_bb_detail,
     APIBbs,
@@ -62,6 +63,9 @@ urlpatterns = [
     # path("api/rubrics/<int:pk>/", APIRubricDetail.as_view()),
     # path("api/rubrics/", APIRubrics.as_view()),
     path("api/", include(router.urls)),
+    
+    path("api/user/create/", CreateUserAPIView.as_view()),
+    
     # path("api/bbs/<int:pk>/", APIBbDetail.as_view()),
     # path("api/bbs/", APIBbs.as_view()),
     path("", my_login, name="home"),  # Перенаправление на авторизацию

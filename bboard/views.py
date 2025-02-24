@@ -30,14 +30,14 @@ from django.views.decorators.vary import vary_on_headers, vary_on_cookie
 
 from rest_framework import status, generics
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
 from bboard.forms import BbForm, RubricBaseFormSet, IcecreamForm,  SearchForm
 from bboard.models import Bb, Rubric, Icecream, Img
-from bboard.serializers import RubricSerializer, BbSerializer
+from bboard.serializers import RubricSerializer, BbSerializer, UserSerializer
 from bboard.signals import add_bb
 
 import logging
@@ -755,3 +755,20 @@ class APIRubricViewSet(ModelViewSet):
 class APIBbViewSet(ModelViewSet):
     queryset = Bb.objects.all()
     serializer_class = BbSerializer
+
+
+#############
+###  JWT  ###
+#############
+
+class CreateUserAPIView(APIView):
+    # permission_classes = (AllowAny,,)
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request):
+        user = request.data
+        serializer = UserSerializer(data=user)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    

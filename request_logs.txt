@@ -18090,3 +18090,5 @@ Traceback (most recent call last):
     raise ImproperlyConfigured(
 django.core.exceptions.ImproperlyConfigured: Field name `user` is not valid for model `User` in `testapp.serializers.UserSerializer`.
 Not Found: /api/users/
+Not Found: /favicon.ico
+Method Not Allowed: /api/token/
