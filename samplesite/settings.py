@@ -178,7 +178,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 # STATIC_ROOT = BASE_DIR / 'static'
 
@@ -464,4 +464,68 @@ SIMPLE_JWT = {
     "TOKEN_BLACKLIST_SERIALIZER": "rest_framework_simplejwt.serializers.TokenBlacklistSerializer",
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
+}
+
+
+###################
+### Логирование ###
+###################
+def info_filter(message):
+    return message.levelname == 'INFO'
+
+LOGGING = {
+    "version": 1,
+    "filters": {
+        "require_debug_false": {
+            "()": "django.utils.log.RequireDebugFalse",
+        },
+        "require_debug_true": {
+            "()": "django.utils.log.RequireDebugTrue",
+        },
+        "info_filter": {
+            "()": "django.utils.log.CallbackFilter",
+            "callback": info_filter,
+        },
+    },
+    "formatters": {
+        "simple": {
+            "format": "[%(asctime)s %(levelname)s %(message)s]",
+            # 'style': '%', # '{}', '$',
+            "datefmt": "%Y-%m-%d %H:%M:%S",
+        },
+    },
+    "handlers": {
+        "console_dev": {
+            "class": "logging.StreamHandler",  # выводит в консоль
+            "formatter": "simple",
+            "filters": ["require_debug_true"],
+        },
+        "console_prod": {
+            "class": "logging.StreamHandler",  # выводит в консоль
+            "formatter": "simple",
+            "level": "ERROR",
+            "filters": ["require_debug_false"],
+        },
+        "file": {
+            # "class": "logging.utils.log.AdminEmail.Handler",  # на почту админу
+            # "class": "logging.handlers.FileHandler",  # в файл
+            "class": "logging.handlers.RotatingFileHandler",  # в файл
+            "filename": BASE_DIR / "log/django-site.log",
+            "maxBytes": 1048576,
+            "backupCount": 10,
+            "formatter": "simple",
+            # 'when': 'D', # обновление каждый день
+            "encoding": "utf-8",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console_dev", "console_prod"],
+        },
+        "django.server": {
+            "handlers": ["file"],
+            "level": "INFO",
+            "propagate": True,
+        },
+    },
 }
